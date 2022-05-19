@@ -5,9 +5,9 @@
 .message{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
     margin: 52px 20px;
     @media screen and (max-width:$breakpoint-md) {
         display:flex;
@@ -18,20 +18,21 @@
 }
 .h1{
     padding: 0px 0px 10px 0px;
-    justify-content: space-between;
+    /*space-betweenは均等割り付けのこと、必要かどうか確かめる*/
     font-size:$fontsize-xl;
     color:$black;
     font-family:$fontfamily-mincho;
     @media screen and (max-width:$breakpoint-md) {
-        /*display: flex;
+        display: flex;
         width: 160px;
-        height: 40px;*/
-        font-size:$fontsize-m;
+        height: 40px;
+        top: 10px;
+        left: 12.5px;
+        font-size:$fontsize-l;
         padding: 0px 0px 6px 0px;
     }
 }
 .h2{
-    justify-content: space-between;
     font-size: $fontsize-m;
     color:$black;
     font-family:$fontfamily-gothic;
