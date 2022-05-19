@@ -2,16 +2,18 @@
 /*BootstrapのCardを使う*/
 /*基本縦並びで、breakpointが来たら横並びになる、縦長な感じ*/
 /*入れ子構造の修正、画像の挿入、三角形の創出、HugかFullかなど*/
-//三角のやつ、調べたもの
-.card{
-    display:flex;
+//三角のやつ、調べたもの、画像の上に三角をはる感じ
+
+//cardが、三個あるカードのひとつずつの塊
+.three-card{
+    display: flex;
     flex-direction: column;
-    //positionの意味
-    width: 224px;
-    height: 359px;
+    @media screen and (max-width:$breakpoint-md) {
+        flex-direction: row;
+    }
 }
+//card-upperの入れ子になっているけど、これでhover適用されるのかな
 .card-upper{
-    background-color: $white;
     @media screen and (max-width:$breakpoint-md) {
         &:hover{
             transition: scale(1.2, 1.2) 0.5s;
@@ -20,14 +22,20 @@
     }
 }
 .card-title{
+    display:flex;
+    flex-direction: column;
     top:0px;
     left:4px;
+    /*width: 224px;
+    height: 359px;*/
+    border-bottom: 359px solid transparent;
+    border-left: 224px $white;
     font-size:$fontsize-l;
     font-weight: bold;
     color:$orange_bistre;
 }
+/*
 .card-body{
-    //この色濃い気がする
     position:absolute;
     justify-content: center;
     align-items: center;
@@ -56,3 +64,4 @@
         text-decoration:none; 
     }
 }
+*/
