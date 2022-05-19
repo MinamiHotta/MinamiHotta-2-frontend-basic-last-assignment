@@ -1,0 +1,33 @@
+/*フォントの情報ある？*/
+@use "../../variables"as*;
+/*
+.auto-layout{
+    display:flex;
+    //flex-direction→justify-content→align-itemsの順
+    flex-direction:row;
+    justify-content: center;
+    align-items:center; 
+    padding:0px 16px;
+}   */
+//buttonは3段階になる、汎用性から考えるとmを基準にしてs,lに飛ぶようにすればよさげ
+.button{
+    position:absolute;
+    width: 180px;
+    height: 45px;
+    background-color:$black;
+    @media screen and(min-width:$breakpoint-sm){
+        width: 150px;
+        height: 55px;
+    };
+    @media screen and(max-width:$breakpoint-lg){
+        width: 200px;
+        height: 55px;
+    };
+//&が親要素を指す
+    &:hover{
+        color:white;
+        background-color:$orange_bistre;
+        transition: background-color 0.2s;
+        text-decoration: none;
+    }
+}
