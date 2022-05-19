@@ -8,57 +8,35 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*width: 327px;
-    height: 204px;*/
     margin: 52px 20px;
-    @media screen and (min-width:$breakpoint-md) {
+    @media screen and (max-width:$breakpoint-md) {
+        display:flex;
+        width:185px;
+        height:88px;
         padding: 32px 20px;
     }
 }
 .h1{
-    /*width: 287px;
-    height: 64px;*/
     padding: 0px 0px 10px 0px;
     justify-content: space-between;
-    font-size:$fontsize-xl; //これxl
+    font-size:$fontsize-xl;
     color:$black;
     font-family:$fontfamily-mincho;
-    @media screen and (min-width:$breakpoint-md) {
-        /*width: 160px;
+    @media screen and (max-width:$breakpoint-md) {
+        /*display: flex;
+        width: 160px;
         height: 40px;*/
+        font-size:$fontsize-m;
         padding: 0px 0px 6px 0px;
     }
 }
 .h2{
-    /*width: 287px;
-    height: 36px;*/
     justify-content: space-between;
-    font-size: $fontsize-s;
+    font-size: $fontsize-m;
     color:$black;
     font-family:$fontfamily-gothic;
-    @media screen and (min-width:$breakpoint-md) {
-        /*width: 145px;
-        height: 28px;*/
-        justify-content: space-between;
+    @media screen and (max-width:$breakpoint-md) {
+        font-size:$fontsize-xs;
+        /*padding: 0px 0px 6px 0px;*/
     }
 }
-/*
-//以下、不要かも
-.right-text{
-    display: flex;
-    width: 185px;
-    height: 88px;
-    padding: 32px 20px;
-}
-.h3{
-    width: 160px;
-    height: 40px;
-    padding: 0px 0px 6px 0px;
-    justify-content: space-between;
-}
-.h4{
-    width: 145px;
-    height: 28px;
-    justify-content: space-between;
-}
-*/
