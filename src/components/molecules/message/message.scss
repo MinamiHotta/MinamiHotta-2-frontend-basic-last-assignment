@@ -1,0 +1,64 @@
+@use "../../variables"as*;
+//top,left等の位置設定どうするのか
+//display: flexはどこまで適応？
+//flex-direction→justify-content→align-itemsの順
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*width: 327px;
+    height: 204px;*/
+    margin: 52px 20px;
+    @media screen and (min-width:$breakpoint-md) {
+        padding: 32px 20px;
+    }
+}
+.h1{
+    /*width: 287px;
+    height: 64px;*/
+    padding: 0px 0px 10px 0px;
+    justify-content: space-between;
+    font-size:$fontsize-xl; //これxl
+    color:$black;
+    font-family:$fontfamily-mincho;
+    @media screen and (min-width:$breakpoint-md) {
+        /*width: 160px;
+        height: 40px;*/
+        padding: 0px 0px 6px 0px;
+    }
+}
+.h2{
+    /*width: 287px;
+    height: 36px;*/
+    justify-content: space-between;
+    font-size: $fontsize-s;
+    color:$black;
+    font-family:$fontfamily-gothic;
+    @media screen and (min-width:$breakpoint-md) {
+        /*width: 145px;
+        height: 28px;*/
+        justify-content: space-between;
+    }
+}
+/*
+//以下、不要かも
+.right-text{
+    display: flex;
+    width: 185px;
+    height: 88px;
+    padding: 32px 20px;
+}
+.h3{
+    width: 160px;
+    height: 40px;
+    padding: 0px 0px 6px 0px;
+    justify-content: space-between;
+}
+.h4{
+    width: 145px;
+    height: 28px;
+    justify-content: space-between;
+}
+*/
