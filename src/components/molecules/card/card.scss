@@ -3,49 +3,6 @@
 /*基本縦並びで、breakpointが来たら横並びになる、縦長な感じ*/
 /*入れ子構造の修正、画像の挿入、三角形の創出、HugかFullかなど*/
 //三角のやつ、調べたもの、画像の上に三角をはる感じ
-
-//cardが、三個あるカードのひとつずつの塊
-.three-card{
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width:$breakpoint-md) {
-        flex-direction: row;
-    }
-}
-//card-upperの入れ子になっているけど、これでhover適用されるのかな
-.card-upper{
-    @media screen and (max-width:$breakpoint-md) {
-        &:hover{
-            transition: scale(1.2, 1.2) 0.5s;
-            transition-timing-function: ease;
-        }
-    }
-}
-.card-title{
-    display:flex;
-    flex-direction: column;
-    top:0px;
-    left:4px;
-    /*width: 224px;
-    height: 359px;*/
-    border-bottom: 359px solid transparent;
-    border-left: 224px $white;
-    font-size:$fontsize-l;
-    font-weight: bold;
-    color:$orange_bistre;
-}
-/*
-.card-body{
-    position:absolute;
-    justify-content: center;
-    align-items: center;
-    background-color:$white_smoke;
-}
-//Hug
-.card-text{
-    padding: 32px 35px;
-    font-size: $fontsize-xs;
-} 
 .button{
     display:flex;
     // position:absolute;
@@ -64,4 +21,120 @@
         text-decoration:none; 
     }
 }
-*/
+.card{
+
+}
+.triangle{
+    top: 0px;
+    width: 0px;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid $white; /* ラベルの色はここで変更 */
+    position: absolute;
+}
+.card-title{
+    display:flex;
+    position: absolute;
+    top:0px;
+    left:4px;
+    font-size:$fontsize-l;
+    font-weight: bold;
+    color:$orange_bistre;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white_smoke;
+}
+.card-text{
+    font-size: $fontsize-xs;
+}
+//cardが、三個あるカードのひとつずつの塊
+/*
+.three-card{
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width:$breakpoint-md) {
+        flex-direction: row;
+    }
+}
+.card{
+    display:flex;
+    width:224px;
+    height:359px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+//全体は224×359
+//写真のサイズとhoverの適用　指定
+//card-upperの入れ子になっているけど、これでhover適用されるのかな
+.card-upper{
+    display: flex;
+    width: 224px;
+    height: 171px;
+    @media screen and (max-width:$breakpoint-md) {
+        &:hover{
+            transition: scale(1.2, 1.2) 0.5s;
+            transition-timing-function: ease;
+        }
+    }
+}
+.card-title{
+    display:flex;
+    position: absolute;
+    flex-direction: column;
+    top:0px;
+    left:4px;
+    /*width: 224px;
+    height: 359px;*/
+    /*
+    font-size:$fontsize-l;
+    font-weight: bold;
+    color:$orange_bistre;
+    z-index: 1;
+}
+//左上ギリギリに
+.card-triangle{
+    border-bottom: 359px $black;
+    border-left: 224px $black;
+    z-index: 2;
+}
+
+.card-text{
+    font-size: $fontsize-m;
+}
+.triangle::before {
+    content: "";
+    top: 0;
+    left: 0;
+    border-bottom: 4em solid transparent;
+    border-left: 4em solid #c12748; /* ラベルの色はここで変更 */
+    /*
+    position: absolute;
+    z-index: 100;
+}
+.triangle::after {
+    content: "New!";
+    display: block;
+    top: 5px;
+    transform: rotate(-45deg);
+    color: #fff; /* 文字色はここで変更 */
+    /*left: 0;
+    position: absolute;
+    z-index: 101;
+}
+/*
+.card-body{
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    background-color:$white_smoke;
+}
+//Hug
+.card-text{
+    padding: 32px 35px;
+    font-size: $fontsize-xs;
+} */
+
