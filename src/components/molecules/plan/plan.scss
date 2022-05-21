@@ -1,21 +1,66 @@
 @use "../../variables" as*;
 //molecules-messageから持ってくる
 .message{
-
+    color:$white; //これはデタラメ
 }
-.plan-frame{
-    
+//h1とh2のフォントサイズはmolecules-messageの通り
+.h1{
+    color: $orange_bistre;
+    font-family: $fontfamily-mincho;
+    font-size: $fontsize-l;
 }
-//１・3番目の背景色
-.pattern-1{
-
-
+.h2{
+    color: $black;
+    font-size: $fontsize-s;
 }
-//2番目の背景色
-.pattern-2{
-
+.plan{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 456px;
+    @media screen and (max-width:$breakpoint-sm) {
+        flex-direction: column;
+        margin-bottom: auto;
+    }
+}
+.each-plan{
+    height: 456px;
+}
+.plan-name{
+    font-size: $fontsize-l;
+    font-weight: bold;
+}
+.color-1{
+    background-color: $orange_zorba;
+}
+.color-2{
+    background-color: $black;
+}
+//.plan-priceどうする
+.each-price{
+    color: $orange_bistre;
+    font-weight: bolder;
+}
+.plan-yen{
+    font-size: $fontsize-s;
+}
+.plan-nedan{
+    font-size: $fontsize-xxl;
+}
+.getsugaku{
+    color: $black;
+}
+.plan-menu-1{
+    height: 60px;
+    color: $black;
+    font-size: $fontsize-s;
+}
+.plan-menu-2{
+    height: 75px;
+    color: $black;
+    font-size: $fontsize-s;
 }
 //atoms-buttonから持ってくる
 .button{
-
+    color: $black;
 }
