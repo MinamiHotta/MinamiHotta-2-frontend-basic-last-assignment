@@ -1,152 +1,68 @@
-@use "../../variables"as*;
+@use "../../variables" as *;
 /*BootstrapのCardを使う*/
 /*基本縦並びで、breakpointが来たら横並びになる、縦長な感じ*/
-/*入れ子構造の修正、画像の挿入、三角形の創出、HugかFullかなど*/
-//三角のやつ、調べたもの、画像の上に三角をはる感じ
-.button{
-    display:flex;
-    // position:absolute;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 55px;
-    color:$white;
-    font-size:$fontsize-s;
-    background-color:$black;
-    transition: background-color 0.2s;
-//&が親要素を指す
-    &:hover{
-        color:$white;
-        background-color:$orange_bistre;
-        text-decoration:none; 
-    }
+//buttonは書かないで読み込む @use "../../button.scss" as*;
+.button {
+  display: flex;
+  // position:absolute;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 55px;
+  color: $white;
+  font-size: $fontsize-s;
+  background-color: $black;
+  transition: background-color 0.2s;
+  //&が親要素を指す
+  &:hover {
+    color: $white;
+    background-color: $orange_bistre;
+    text-decoration: none;
+  }
 }
-.card{
-
+.card {
 }
 /*画像にhoverして0.5秒かけて1.2倍拡大するようにお願いします。
 ・変化の度合いはeaseです
 ・smの時には拡大しません。*/
-.card-upper{
-    @media screen and (min-width: $breakpoint-md){
-        &:hover{
-            transform: scale(1.2,1.2);
-            transition: 0.5s;
-            transition-timing-function: ease;
-        }
+.card-upper {
+  overflow: hidden;
+  & > img {
+    width: 100%;
+    transition: 0.5s;
+    transition-timing-function: ease;
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    &:hover > img {
+      transform: scale(1.2, 1.2);
     }
+  }
 }
-.triangle{
-    top: 0px;
-    width: 0px;
-    border-bottom: 150px solid transparent;
-    border-left: 150px solid $white; /* ラベルの色はここで変更 */
-    position: absolute;
+.triangle {
+  top: 0px;
+  width: 0px;
+  border-bottom: 150px solid transparent;
+  border-left: 150px solid $white; /* ラベルの色はここで変更 */
+  position: absolute;
 }
-.card-title{
-    display:flex;
-    position: absolute;
-    top:0px;
-    left:4px;
-    font-size:$fontsize-l;
-    font-weight: bold;
-    color:$orange_bistre;
+.card-title {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  font-size: $fontsize-l;
+  font-weight: bold;
+  color: $orange_bistre;
 }
-.card-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $white_smoke;
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white_smoke;
+  padding: 32px 46px;
 }
-.card-text{
-    font-size: $fontsize-xs;
+.card-text {
+  font-size: $fontsize-xs;
+  margin-bottom: 30px;
 }
-//cardが、三個あるカードのひとつずつの塊
-/*
-.three-card{
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width:$breakpoint-md) {
-        flex-direction: row;
-    }
-}
-.card{
-    display:flex;
-    width:224px;
-    height:359px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-//全体は224×359
-//写真のサイズとhoverの適用　指定
-//card-upperの入れ子になっているけど、これでhover適用されるのかな
-.card-upper{
-    display: flex;
-    width: 224px;
-    height: 171px;
-    @media screen and (max-width:$breakpoint-md) {
-        &:hover{
-            transition: scale(1.2, 1.2) 0.5s;
-            transition-timing-function: ease;
-        }
-    }
-}
-.card-title{
-    display:flex;
-    position: absolute;
-    flex-direction: column;
-    top:0px;
-    left:4px;
-    /*width: 224px;
-    height: 359px;*/
-    /*
-    font-size:$fontsize-l;
-    font-weight: bold;
-    color:$orange_bistre;
-    z-index: 1;
-}
-//左上ギリギリに
-.card-triangle{
-    border-bottom: 359px $black;
-    border-left: 224px $black;
-    z-index: 2;
-}
-
-.card-text{
-    font-size: $fontsize-m;
-}
-.triangle::before {
-    content: "";
-    top: 0;
-    left: 0;
-    border-bottom: 4em solid transparent;
-    border-left: 4em solid #c12748; /* ラベルの色はここで変更 */
-    /*
-    position: absolute;
-    z-index: 100;
-}
-.triangle::after {
-    content: "New!";
-    display: block;
-    top: 5px;
-    transform: rotate(-45deg);
-    color: #fff; /* 文字色はここで変更 */
-    /*left: 0;
-    position: absolute;
-    z-index: 101;
-}
-/*
-.card-body{
-    position:absolute;
-    justify-content: center;
-    align-items: center;
-    background-color:$white_smoke;
-}
-//Hug
-.card-text{
-    padding: 32px 35px;
-    font-size: $fontsize-xs;
-} */
-
