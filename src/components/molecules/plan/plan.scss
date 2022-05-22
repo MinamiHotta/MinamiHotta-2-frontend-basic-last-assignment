@@ -1,4 +1,4 @@
-@use "../../variables" as*;
+@use "../../variables" as *;
 //molecules-messageから持ってくる
 //CSS Dinerのnth childを使うこと！→p要素の場合、p:nth-child(2n+1)と(2n)にしてbackground-color変える
 /*.message{
@@ -24,74 +24,84 @@
     }
 }*/
 //ここから
-.each-plan{
-    display: flex;
-    flex-direction: column;
-    height: 456px;
-    text-align: center;
-    //2つの箱の間にスペース空けたい
-    //ここにalign-items:center入れると箱のサイズが統一されない
+
+//each-planのみ外に
+.each-plan {
+  display: flex;
+  flex-direction: column;
+  height: 456px;
+  text-align: center;
+  //2つの箱の間にスペース空けたい
+  //ここにalign-items:center入れると箱のサイズが統一されない
+  &:nth-child(2n + 1) {
+    .plan-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      color: $white;
+      font-size: $fontsize-m;
+      font-weight: bold;
+      background-color: $orange_zorba;
+    }
+  }
+  &:nth-child(2n) {
+    .plan-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      color: $white;
+      font-size: $fontsize-m;
+      font-weight: bold;
+      background-color: $orange_bistre;
+    }
+    border: 5px solid $orange_bistre; //solid=実線
+  }
 }
-.plan-name{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
-    color: $white;
-    font-size: $fontsize-m;
-    font-weight: bold;
+.plan-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 142px;
+  padding: 24px 0px;
+  background-color: $gray_desertStorm;
 }
-//nth-childの使い方
-.plan-name:nth-child(2n+1){
-    background-color: $orange_zorba;
-}
-.plan-name:nth-child(2n){
-    background-color: $black;
-}
-.plan-price{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 142px;
-    padding: 24px 0px;
-    background-color: $gray_desertStorm;
-}
-.each-price{
-    display: flex;
-    align-items: baseline;
-    color: $orange_bistre;
-    font-weight: bolder; 
-    //margin: 0px 0px 16px 0px;
-}
-.plan-yen{
+.each-price {
+  display: flex;
+  align-items: baseline;
+  color: $orange_bistre;
+  font-weight: bolder;
+  //margin: 0px 0px 16px 0px;
+  & > .plan-yen {
     font-size: $fontsize-s;
     font-weight: bolder;
-    margin: 0px 0px 8px 0px; //これ使わなくても下側揃えできるか
-}
-.plan-nedan{
+  }
+  & > .plan-nedan {
     font-size: $fontsize-xxl;
-}
-.plan-getsugaku{
+  }
+  & > .plan-getsugaku {
     color: $black;
     font-size: $fontsize-xs;
+  }
 }
-.plan-menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $black;
-    font-size: $fontsize-s;
-    border: 1.5px solid;
-    border-color: $gray_desertStorm;
+.plan-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  font-size: $fontsize-s;
+  border: 1.5px solid;
+  border-color: $gray_desertStorm;
 }
-.menu-1{
-    height: 60px;
+.menu-1 {
+  height: 60px;
 }
-.menu-2{
-    height: 75px;
-    text-align: center;
+.menu-2 {
+  height: 75px;
+  text-align: center;
 }
 /*atoms-buttonから持ってくる
 .button{
