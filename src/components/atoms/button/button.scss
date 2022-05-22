@@ -1,34 +1,35 @@
 /*フォントの情報ある？*/
-@use "../../variables"as*;
+@use "../../variables" as *;
 /*
 .auto-layout{
     
     padding:0px 16px;
 }   */
 //buttonは3段階になる、汎用性から考えるとmを基準にしてs,lに飛ぶようにすればよさげ
-.button{
-    display:flex;
-    //flex-direction→justify-content→align-itemsの順
-    flex-direction:row;
-    justify-content: center;
-    align-items:center; 
-    width: 200px;
+.button {
+  display: flex;
+  //flex-direction→justify-content→align-itemsの順
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  background-color: $black;
+  color: $white;
+  transition: background-color 0.2s;
+  //hoverの中に入れると、帰りが0sになってしまう
+  @media screen and(max-width:$breakpoint-lg) {
+    width: 150px;
     height: 55px;
-    background-color:$black;
-    color:$white;
-    transition: background-color 0.2s;
-    @media screen and(max-width:$breakpoint-lg){
-        width: 150px;
-        height: 55px;
-    };
-    @media screen and(max-width:$breakpoint-md){
-        width: 180px;
-        height: 45px;
-    };
-//&が親要素を指す
-    &:hover{
-        color: $white;
-        background-color:$orange_bistre;
-        text-decoration: none;
-    }
+  }
+  @media screen and(max-width:$breakpoint-md) {
+    width: 180px;
+    height: 45px;
+  }
+  //&が親要素を指す
+  &:hover {
+    color: $white;
+    background-color: $orange_bistre;
+    text-decoration: none;
+  }
 }
