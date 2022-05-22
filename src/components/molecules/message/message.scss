@@ -8,36 +8,36 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin: 52px 20px;
+    padding: 52px 20px;
     @media screen and (max-width:$breakpoint-md) {
         display:flex;
         width:185px;
         height:88px;
         padding: 32px 20px;
     }
-}
-.h1{
-    padding: 0px 0px 10px 0px;
-    /*space-betweenは均等割り付けのこと、必要かどうか確かめる*/
-    font-size:$fontsize-xl;
-    color:$black;
-    font-family:$fontfamily-mincho;
-    @media screen and (max-width:$breakpoint-md) {
-        display: flex;
-        width: 160px;
-        height: 40px;
-        top: 10px;
-        left: 12.5px;
-        font-size:$fontsize-l;
-        padding: 0px 0px 6px 0px;
+    h2{
+        padding: 0px 0px 10px 0px;
+        /*space-betweenは均等割り付けのこと、必要かどうか確かめる*/
+        font-size:$fontsize-xl;
+        color:$black;
+        font-family:$fontfamily-mincho;
+        @media screen and (max-width:$breakpoint-md) {
+            display: flex;
+            width: 160px;
+            height: 40px;
+            top: 10px;
+            left: 12.5px;
+            font-size:$fontsize-l;
+            padding: 0px 0px 6px 0px;
+        }
     }
-}
-.h2{
-    font-size: $fontsize-m;
-    color:$black;
-    font-family:$fontfamily-gothic;
-    @media screen and (max-width:$breakpoint-md) {
-        font-size:$fontsize-xs;
-        /*padding: 0px 0px 6px 0px;*/
+    h3{
+        font-size: $fontsize-m;
+        color:$black;
+        font-family:$fontfamily-gothic;
+        @media screen and (max-width:$breakpoint-md) {
+            font-size:$fontsize-xs;
+            /*padding: 0px 0px 6px 0px;*/
+        }
     }
 }
