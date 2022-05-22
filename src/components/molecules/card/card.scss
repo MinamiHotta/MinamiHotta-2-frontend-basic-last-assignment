@@ -24,6 +24,18 @@
 .card{
 
 }
+/*画像にhoverして0.5秒かけて1.2倍拡大するようにお願いします。
+・変化の度合いはeaseです
+・smの時には拡大しません。*/
+.card-upper{
+    @media screen and (min-width: $breakpoint-md){
+        &:hover{
+            transform: scale(1.2,1.2);
+            transition: 0.5s;
+            transition-timing-function: ease;
+        }
+    }
+}
 .triangle{
     top: 0px;
     width: 0px;
