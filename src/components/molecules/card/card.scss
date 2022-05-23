@@ -1,7 +1,7 @@
 @use "../../variables" as *;
+//@use "../../button.scss" as *;
 /*BootstrapのCardを使う*/
 /*基本縦並びで、breakpointが来たら横並びになる、縦長な感じ*/
-//buttonは書かないで読み込む @use "../../button.scss" as*;
 .button {
   display: flex;
   // position:absolute;
@@ -20,11 +20,6 @@
     text-decoration: none;
   }
 }
-.card {
-}
-/*画像にhoverして0.5秒かけて1.2倍拡大するようにお願いします。
-・変化の度合いはeaseです
-・smの時には拡大しません。*/
 .card-upper {
   overflow: hidden;
   & > img {
