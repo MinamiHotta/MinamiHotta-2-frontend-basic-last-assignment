@@ -2,13 +2,27 @@
 @use "../../news-and-events-title.css" as *;
 @use "../../news-and-events-more.css" as *;
 .news-kariwaku {
-  .h2 {
+  .news-body {
+    display: flex;
+    .each-news {
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .news-date {
+        color: $gray_nobel;
+        font-size: $fontsize-s;
+      }
+      .news-text {
+        color: $black;
+        font-size: $fontsize-m;
+        &:hover {
+          color: $orange_bistre;
+        }
+      }
+    }
+    margin-bottom: 30px;
   }
-  .caption {
-  }
-  .news-and-events-more {
-  }
-  //これ何だ
-  .fas fa-chevron-right {
-  }
+  margin-bottom: 35px;
 }
+//導入してくるパーツの、右寄せ、左寄せを調整と、実装結果確認
