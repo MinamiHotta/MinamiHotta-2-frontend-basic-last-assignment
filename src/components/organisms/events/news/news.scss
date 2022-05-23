@@ -1,6 +1,6 @@
 @use "../../variables" as *;
-@use "../../news-and-events-title.css" as *;
-@use "../../news-and-events-more.css" as *;
+@use "../../news-and-events-title" as *;
+@use "../../news-and-events-more" as *;
 .news-kariwaku {
   .news-body {
     display: flex;
