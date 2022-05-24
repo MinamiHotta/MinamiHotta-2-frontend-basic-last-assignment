@@ -1,3 +1,93 @@
+@use "../../variables" as *;
+ul {
+  display: flex;
+  flex-direction: column;
+  height: 456px;
+  @media screen and (max-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    height: 456px;
+    margin-bottom: 24px;
+    @media screen and (max-width: $breakpoint-md) {
+      margin-bottom: 0px;
+      margin-right: auto;
+    }
+    &:nth-child(2n + 1) {
+      .plan-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 64px;
+        color: $white;
+        font-size: $fontsize-m;
+        font-weight: bold;
+        background-color: $orange_zorba;
+      }
+    }
+    &:nth-child(2n) {
+      .plan-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        color: $white;
+        font-size: $fontsize-m;
+        font-weight: bold;
+        background-color: $orange_bistre;
+      }
+      border: 5px solid $orange_bistre; //solid=実線
+    }
+    .plan-price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 142px;
+      padding: 24px 0px;
+      background-color: $gray_desertStorm;
+      .each-price {
+        display: flex;
+        align-items: baseline;
+        color: $orange_bistre;
+        //margin: 0px 0px 16px 0px;
+        & > .plan-yen {
+          font-size: $fontsize-s;
+          font-weight: bolder;
+        }
+        & > .plan-nedan {
+          font-size: $fontsize-xxl;
+          font-weight: bolder;
+        }
+      }
+      .plan-getsugaku {
+        color: $black;
+        font-size: $fontsize-xs;
+      }
+    }
+    .plan-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $black;
+      font-size: $fontsize-s;
+      border-bottom: 1px solid $gray_gainsboro;
+      border-right: 1px solid $gray_gainsboro;
+      border-left: 1px solid $gray_gainsboro;
+    }
+    .menu-1 {
+      height: 60px;
+    }
+    .menu-2 {
+      height: 75px;
+      text-align: center;
+    }
+  }
+}
+
 //molecules-messageから持ってくる
 //CSS Dinerのnth childを使うこと！→p要素の場合、p:nth-child(2n+1)と(2n)にしてbackground-color変える
 /*.message{
@@ -13,90 +103,6 @@
     color: $black;
     font-size: $fontsize-s;
 }
-.plan{
-    display:flex;
-    flex-direction: row;
-    height: 456px;
-    @media screen and (max-width:$breakpoint-sm) {
-        flex-direction: column;
-        margin-bottom: auto;
-    }
-}*/
 
-@use "../../variables" as *;
-//ここから
-.each-plan {
-  display: flex;
-  flex-direction: column;
-  height: 456px;
-  text-align: center;
-  &:nth-child(2n + 1) {
-    .plan-name {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 64px;
-      color: $white;
-      font-size: $fontsize-m;
-      font-weight: bold;
-      background-color: $orange_zorba;
-    }
-  }
-  &:nth-child(2n) {
-    .plan-name {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 64px;
-      color: $white;
-      font-size: $fontsize-m;
-      font-weight: bold;
-      background-color: $orange_bistre;
-    }
-    border: 5px solid $orange_bistre; //solid=実線
-  }
-  .plan-price {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 142px;
-    padding: 24px 0px;
-    background-color: $gray_desertStorm;
-    .each-price {
-      display: flex;
-      align-items: baseline;
-      color: $orange_bistre;
-      //margin: 0px 0px 16px 0px;
-      & > .plan-yen {
-        font-size: $fontsize-s;
-        font-weight: bolder;
-      }
-      & > .plan-nedan {
-        font-size: $fontsize-xxl;
-        font-weight: bolder;
-      }
-    }
-    .plan-getsugaku {
-      color: $black;
-      font-size: $fontsize-xs;
-    }
-  }
-  .plan-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $black;
-    font-size: $fontsize-s;
-    border: 1.5px solid;
-    border-color: $gray_desertStorm;
-  }
-  .menu-1 {
-    height: 60px;
-  }
-  .menu-2 {
-    height: 75px;
-    text-align: center;
-  }
 }
+*/
