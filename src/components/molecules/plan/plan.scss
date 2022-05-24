@@ -1,16 +1,17 @@
 @use "../../variables" as *;
-ul {
+.plan {
   display: flex;
   flex-direction: column;
   height: 456px;
   @media screen and (max-width: $breakpoint-md) {
     flex-direction: row;
   }
-  li {
+  .each-plan {
     display: flex;
     flex-direction: column;
     height: 456px;
     margin-bottom: 24px;
+    padding: 0px;
     @media screen and (max-width: $breakpoint-md) {
       margin-bottom: 0px;
       margin-right: auto;
@@ -38,7 +39,8 @@ ul {
         font-weight: bold;
         background-color: $orange_bistre;
       }
-      border: 5px solid $orange_bistre; //solid=実線
+      border: 5px solid $orange_bistre;
+      //solid=実線
     }
     .plan-price {
       display: flex;
