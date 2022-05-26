@@ -1,30 +1,63 @@
 @use "../../variables" as *;
-
 .top {
-  & > img {
+  & > .top-upper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > img {
+      width: 100%;
+      @media screen and (max-width: $breakpoint-md) {
+        height: 360px;
+        //padding: 5px 136px 0px 135px;
+        //高さに合わせてトリミングされる
+        //clip: rect( 36px, 290px, 194px, 95px );
+      }
+    }
+    & > .top-text {
+      position: absolute;
+      text-align: center;
+      //top: 50%; //204px; //298px; //縦書きになったときの真ん中
+      //left: 50%; //446px; //352px;
+      font-family: $fontfamily-mincho;
+      font-size: $fontsize-xl;
+      color: $white;
+      writing-mode: vertical-rl;
+      @media screen and (max-width: $breakpoint-md) {
+        // top: 151px;
+        // left: 415.5px;
+        font-size: $fontsize-l;
+      }
+    }
   }
-  & > .top-text {
-    position: absolute;
-    top: 298px;
-    left: 352px;
-    font-family: $fontfamily-mincho;
-    font-size: $fontsize-xl;
-    color: $white;
-  }
+
   & > .top-body {
+    //width: 992px; //ここやめたい
     text-align: center;
-    margin: 0px 16px 22px;
     padding-top: 52px;
     padding-bottom: 74px;
     background-color: $black;
-    color: $white;
-    & > .top-message {
-      font-family: $fontfamily-mincho;
-      font-size: $fontsize-xl;
-      padding: 0px 13.5px 10px;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 5px 136px 0px 135px;
     }
-    & > .top-text {
-      font-size: $fontsize-s;
+    & > .top-content {
+      color: $white;
+      margin: 0px 16px 22px;
+      & > .top-message {
+        font-family: $fontfamily-mincho;
+        font-size: $fontsize-xl;
+        padding: 0px 13.5px 10px;
+        @media screen and (max-width: $breakpoint-md) {
+          padding: 34.5px 92px 0px;
+          font-size: $fontsize-l;
+        }
+      }
+      & > .top-content2 {
+        font-size: $fontsize-s;
+        padding: 0px;
+        @media screen and (max-width: $breakpoint-md) {
+          padding: 0px 25px 32px;
+        }
+      }
     }
   }
 }
