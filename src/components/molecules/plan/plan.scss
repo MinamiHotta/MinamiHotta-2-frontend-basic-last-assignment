@@ -70,15 +70,18 @@
       }
     }
     .plan-menu {
-      display: flex;
+      /*display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: center;*/
+      text-align: center;
+      padding: 20px 0px;
       color: $black;
       font-size: $fontsize-s;
       border-bottom: 1px solid $gray_gainsboro;
       border-right: 1px solid $gray_gainsboro;
       border-left: 1px solid $gray_gainsboro;
+      list-style: none;
     }
     .menu-1 {
       height: 60px;
