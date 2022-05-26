@@ -9,9 +9,8 @@
       justify-content: space-between;
       list-style: none;
       background-color: $white;
-      &:not(border-bottom) {
-        border: 1px solid $gray_desertStorm;
-      }
+      border: 1px solid $gray_desertStorm;
+      //一番下の箱だけ、4辺囲む、他の三つは底以外の3辺囲む
       //padding して
       & > .news-date {
         color: $gray_nobel;
