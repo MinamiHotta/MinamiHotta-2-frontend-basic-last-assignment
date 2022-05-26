@@ -1,0 +1,27 @@
+@use "../../variables" as *;
+.message {
+  text-align: center;
+  padding: 52px 20px;
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 12px 12.5px 10px;
+  }
+  & > h2 {
+    font-size: $fontsize-xl;
+    color: $black;
+    font-family: $fontfamily-mincho;
+    margin-bottom: 10px;
+    @media screen and (max-width: $breakpoint-md) {
+      margin-bottom: 8px;
+      font-size: $fontsize-l;
+    }
+  }
+  & > p {
+    font-size: $fontsize-s;
+    color: $black;
+    font-family: $fontfamily-gothic;
+  }
+}
+
+//top,left等の位置設定どうするのか
+//display: flexはどこまで適応？
+//flex-direction→justify-content→align-itemsの順
