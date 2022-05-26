@@ -1,5 +1,5 @@
-import Item_News from "../components/organisms/events/news/news.html";
-import "../components/organisms/events/news/news.scss";
+import Item_News from "../components/organisms/news/news.html";
+import "../components/organisms/news/news.scss";
 
 export default { title: "Organisms-News" };
 
