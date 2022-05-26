@@ -1,7 +1,7 @@
 @use "../../variables" as *;
-@use "../../button" as *;
 /*BootstrapのCardを使う*/
 /*基本縦並びで、breakpointが来たら横並びになる、縦長な感じ*/
+/*
 .button {
   display: flex;
   // position:absolute;
@@ -19,7 +19,7 @@
     background-color: $orange_bistre;
     text-decoration: none;
   }
-}
+}*/
 .card-upper {
   overflow: hidden;
   & > img {
