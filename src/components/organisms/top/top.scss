@@ -1,4 +1,9 @@
 @use "../../variables" as *;
+/* break-point=md
+
+・そうだ。カフェに行こうの部分は縦書きでお願いします。
+・md以下の時は画像の高さは360px固定、lg以上の時はウィンドウの高さいっぱいになるようにお願いします。
+*/
 .top {
   & > .top-upper {
     display: flex;
@@ -13,6 +18,8 @@
         //clip: rect( 36px, 290px, 194px, 95px );
       }
     }
+    /*molecules で作成した message をもとに、色を追加しましょう。
+    このパーツの message だけに新しくスタイルを追加するにはどうすれば良いでしょうか？*/
     & > .top-text {
       position: absolute;
       text-align: center;
