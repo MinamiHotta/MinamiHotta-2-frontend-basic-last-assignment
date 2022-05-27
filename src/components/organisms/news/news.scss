@@ -1,7 +1,8 @@
 @use "../../variables" as *;
-
 .news-kariwaku {
   .news-body {
+    padding-left: 0px; //liタグの右余白なくす
+    border: 1px solid $gray_desertStorm;
     & > .each-news {
       padding: 20px;
       display: flex;
@@ -9,9 +10,9 @@
       justify-content: space-between;
       list-style: none;
       background-color: $white;
-      border: 1px solid $gray_desertStorm;
-      //一番下の箱だけ、4辺囲む、他の三つは底以外の3辺囲む
-      //padding して
+      &:not(:first-child) {
+        border-top: 1px solid $gray_desertStorm;
+      }
       & > .news-date {
         color: $gray_nobel;
         font-size: $fontsize-s;
