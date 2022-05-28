@@ -1,0 +1,30 @@
+@use "../../variables" as *;
+.dropdown {
+  background-color: $black;
+  color: $white;
+  padding: 0px 16px;
+  border: 1px solid $black;
+  & > .header-top {
+    // &>.switch{
+    //     @media screen and (min-width:$breakpoint-lg){
+
+    //     }
+    // } //基本この中にスマホ版を入れるつもり
+    display: flex; //ここ効果なし
+    flex-direction: row;
+    & > .btn-dropdown {
+      text-align: right;
+      //buttonの見かけを上書きする
+    }
+  }
+  & > .dropdown-menu {
+    color: $white;
+    background-color: $black;
+    padding: 15px 0px;
+    text-align: left;
+    //display: block;
+  }
+  & > .concept-ver {
+    padding: 0px 12px;
+  }
+}
