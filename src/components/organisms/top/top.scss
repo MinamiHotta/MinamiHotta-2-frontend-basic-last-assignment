@@ -38,17 +38,41 @@
   }
 
   & > .top-body {
-    //width: 992px; //ここやめたい
     text-align: center;
     padding-top: 52px;
     padding-bottom: 74px;
     background-color: $black;
     @media screen and (max-width: $breakpoint-md) {
-      padding: 5px 136px 0px 135px;
+      padding-top: 30px;
+      padding-bottom: 32px;
     }
     & > .top-content {
       color: $white;
       margin: 0px 16px 22px;
+      /*
+      .message {
+  text-align: center;
+  padding: 52px 20px;
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 12px 12.5px 10px;
+  }
+  & > h2 {
+    font-size: $fontsize-xl;
+    color: $black;
+    font-family: $fontfamily-mincho;
+    margin-bottom: 10px;
+    @media screen and (max-width: $breakpoint-md) {
+      margin-bottom: 8px;
+      font-size: $fontsize-l;
+    }
+  }
+  & > p {
+    font-size: $fontsize-s;
+    color: $black;
+    font-family: $fontfamily-gothic;
+  }
+}*/
+
       & > .top-message {
         font-family: $fontfamily-mincho;
         font-size: $fontsize-xl;
