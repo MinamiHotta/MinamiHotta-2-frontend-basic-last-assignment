@@ -1,11 +1,12 @@
 @use "../../variables" as *;
 //for 並べ替え
-// .plan {
-//   display: flex;
-//   flex-direction: column;
-//   @media screen and (min-width: $breakpoint-md) {
-//     flex-direction: row;
-//   }
+.plan {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+}
 //for 縦横の余白
 /*margin-bottom: 24px;
     padding: 0px;
@@ -15,10 +16,16 @@
     }*/
 
 .each-plan {
+  //本当は、周りにborderを付けたくないが、どうすれば「コアタイム」のところを引き延ばせるか
+  border: 1px solid $gray_gainsboro;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
   &:nth-child(2n + 1) {
     .plan-name {
       text-align: center;
       padding: 18px 31px;
+      margin-bottom: 0px;
       color: $white;
       font-size: $fontsize-m;
       font-weight: bold;
@@ -26,10 +33,10 @@
     }
   }
   &:nth-child(2n) {
-    margin: 34px 0px;
+    //margin: 34px 0px;
     .plan-name {
       text-align: center;
-      padding: 17px 20px; //17.5px
+      padding: 16px 25px; //17px 20px
       color: $white;
       font-size: $fontsize-m;
       font-weight: bold;
@@ -39,7 +46,7 @@
     box-sizing: border-box;
   }
   .plan-body {
-    border: 1px solid $gray_gainsboro;
+    //border: 1px solid $gray_gainsboro;
     margin: 0px;
     padding: 0px;
     & > .plan-price {
@@ -47,7 +54,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 142px;
+      //height: 142px;
       padding: 24px 0px;
       background-color: $gray_desertStorm;
       & > .each-price {
