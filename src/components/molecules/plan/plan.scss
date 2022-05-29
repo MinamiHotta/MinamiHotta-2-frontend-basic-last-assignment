@@ -1,79 +1,81 @@
 @use "../../variables" as *;
-.plan {
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: $breakpoint-md) {
-    flex-direction: row;
-  }
-  .each-plan {
-    margin-bottom: 24px;
+//for 並べ替え
+// .plan {
+//   display: flex;
+//   flex-direction: column;
+//   @media screen and (min-width: $breakpoint-md) {
+//     flex-direction: row;
+//   }
+//for 縦横の余白
+/*margin-bottom: 24px;
     padding: 0px;
     @media screen and (min-width: $breakpoint-md) {
       margin-bottom: 0px;
       margin-right: auto;
-    }
-    &:nth-child(2n + 1) {
-      .plan-name {
-        text-align: center;
-        padding: 18px 31px;
-        color: $white;
-        font-size: $fontsize-m;
-        font-weight: bold;
-        background-color: $orange_zorba;
-      }
-    }
-    &:nth-child(2n) {
-      .plan-name {
-        text-align: center;
-        padding: 17px 20px; //17.5px
-        color: $white;
-        font-size: $fontsize-m;
-        font-weight: bold;
-        background-color: $orange_bistre;
-      }
-      border: 5px solid $orange_bistre;
-      box-sizing: border-box;
-    }
-    .plan-body {
-      border: 1px solid $gray_gainsboro;
-      margin: 0px;
-      padding: 0px;
-      & > .plan-price {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 142px;
-        padding: 24px 0px;
-        background-color: $gray_desertStorm;
-        & > .each-price {
-          display: flex;
-          align-items: baseline;
-          color: $orange_bistre;
-          font-size: $fontsize-xxl;
-          font-weight: bolder;
-          &::before {
-            content: "￥";
-            font-size: $fontsize-s;
-          }
-        }
-      }
-      & > .plan-getsugaku {
-        color: $black;
-        font-size: $fontsize-xs;
-      }
-    }
-    .plan-menu {
+    }*/
+
+.each-plan {
+  &:nth-child(2n + 1) {
+    .plan-name {
       text-align: center;
-      padding: 20px 0px;
-      color: $black;
-      font-size: $fontsize-s;
-      border-top: 1px solid $gray_gainsboro;
-      list-style: none;
-      padding: 20px 19px 15px;
+      padding: 18px 31px;
+      color: $white;
+      font-size: $fontsize-m;
+      font-weight: bold;
+      background-color: $orange_zorba;
     }
   }
+  &:nth-child(2n) {
+    margin: 34px 0px;
+    .plan-name {
+      text-align: center;
+      padding: 17px 20px; //17.5px
+      color: $white;
+      font-size: $fontsize-m;
+      font-weight: bold;
+      background-color: $orange_bistre;
+    }
+    border: 5px solid $orange_bistre;
+    box-sizing: border-box;
+  }
+  .plan-body {
+    border: 1px solid $gray_gainsboro;
+    margin: 0px;
+    padding: 0px;
+    & > .plan-price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 142px;
+      padding: 24px 0px;
+      background-color: $gray_desertStorm;
+      & > .each-price {
+        color: $orange_bistre;
+        font-size: $fontsize-xxl;
+        font-weight: bolder;
+        &::before {
+          content: "￥";
+          font-size: $fontsize-s;
+        }
+      }
+    }
+    & > .plan-getsugaku {
+      color: $black;
+      font-size: $fontsize-xs;
+    }
+  }
+  .plan-menu {
+    text-align: center;
+    padding: 20px 0px;
+    color: $black;
+    font-size: $fontsize-s;
+    border-top: 1px solid $gray_gainsboro;
+    list-style: none;
+    padding: 20px 19px 15px;
+  }
 }
+//}
 
 //molecules-messageから持ってくる
 //CSS Dinerのnth childを使うこと！→p要素の場合、p:nth-child(2n+1)と(2n)にしてbackground-color変える
