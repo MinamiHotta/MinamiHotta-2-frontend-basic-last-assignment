@@ -1,23 +1,23 @@
 @use "../../variables" as *;
-.news-kariwaku {
+.news {
   .news-body {
     padding-left: 0px; //liタグの右余白なくす
     border: 1px solid $gray_desertStorm;
     & > .each-news {
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      list-style: none;
+      margin: 0px;
       background-color: $white;
       &:not(:first-child) {
         border-top: 1px solid $gray_desertStorm;
       }
       & > .news-date {
         color: $gray_nobel;
-        font-size: $fontsize-s;
+        font-size: $fontsize-xs;
       }
       & > .news-text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; //一行に収める
         color: $black;
         font-size: $fontsize-m;
         transition: 0.2s ease;
