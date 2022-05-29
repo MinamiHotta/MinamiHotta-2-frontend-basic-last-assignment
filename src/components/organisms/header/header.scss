@@ -1,5 +1,7 @@
 @use "../../variables" as *;
 .dropdown {
+  display: flex;
+  justify-content: space-between;
   background-color: $black;
   color: $white;
   padding: 0px 16px;
@@ -10,10 +12,8 @@
 
     //     }
     // } //基本この中にスマホ版を入れるつもり
-    display: flex; //ここ効果なし
-    flex-direction: row;
-    & > .btn-dropdown {
-      text-align: right;
+    & > .is-hidden {
+      display: none;
       //buttonの見かけを上書きする
     }
   }
@@ -22,7 +22,11 @@
     background-color: $black;
     padding: 15px 0px;
     text-align: left;
+
     //display: block;
+    & > .dropdown-text {
+      color: $white;
+    }
   }
   & > .concept-ver {
     padding: 0px 12px;

@@ -1,19 +1,21 @@
 <div class="dropdown">
     <head class="header-top">
-        <a href="#"><img src="./image 1.png"></img></a>
-        <button class="button btn-drop-down">
-            button<span class="visually-hidden"></span>
+        <a href="#"><img src="./header-images/image 1.png"></img></a>
+        <!-- buttonの範囲を狭めたい, hoverをみせないようにしたい -->
+        <button class="button is-hidden">
+            <img src="./header-images/humberger-icon.png"></img>
+            <!-- <span class="visually-hidden"></span> -->
         </button>
     </head>
     <ul class="dropdown-menu">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">CONCEPT</a></li>
-        <li><a href="#">SERVICE</a></li>
-        <li><a href="#">FLOOR</a></li>
-        <li><a href="#">INTERVIEW</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">ACCESS</a></li>
-        <li><a href="#">DOWNLOAD</a></li>
+        <li><a href="#" class="dropdown-text">HOME</a></li>
+        <li><a href="#" class="dropdown-text">CONCEPT</a></li>
+        <li><a href="#" class="dropdown-text">SERVICE</a></li>
+        <li><a href="#" class="dropdown-text">FLOOR</a></li>
+        <li><a href="#" class="dropdown-text">INTERVIEW</a></li>
+        <li><a href="#" class="dropdown-text">BLOG</a></li>
+        <li><a href="#" class="dropdown-text">ACCESS</a></li>
+        <li><a href="#" class="dropdown-text">DOWNLOAD</a></li>
     </ul>
 </div>
 
@@ -37,3 +39,8 @@
     <li><a href="#">Separated link</a></li>
   </ul>
 </div> -->
+<!-- input:active {
+   /* 押されたとき */
+   background-image: linear-gradient(180deg, #68d3db, #e5f4fc);
+   border: 1px solid skyblue;
+}で+-の変更ができるかも -->
