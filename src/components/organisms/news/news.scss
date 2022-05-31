@@ -7,6 +7,9 @@
       padding: 20px;
       margin: 0px;
       background-color: $white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       &:not(:first-child) {
         border-top: 1px solid $gray_desertStorm;
       }
@@ -15,9 +18,6 @@
         font-size: $fontsize-xs;
       }
       & > .news-text {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap; //一行に収める
         color: $black;
         font-size: $fontsize-m;
         transition: 0.2s ease;
