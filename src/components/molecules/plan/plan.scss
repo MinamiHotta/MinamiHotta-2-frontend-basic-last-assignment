@@ -16,13 +16,37 @@
     }*/
 
 .each-plan {
-  //本当は、周りにborderを付けたくないが、どうすれば「コアタイム」のところを引き延ばせるか
-  //border: 1px solid $gray_gainsboro;
-  // justify-content: space-between;
+  .plan-body {
+    border: 1px solid $gray_gainsboro;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    & > .plan-price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+      padding: 24px 0px;
+      background-color: $gray_desertStorm;
+      & > .each-price {
+        color: $orange_bistre;
+        font-size: $fontsize-xxl;
+        font-weight: bolder;
+        &::before {
+          content: "￥";
+          font-size: $fontsize-s;
+        }
+      }
+    }
+    & > .plan-getsugaku {
+      color: $black;
+      font-size: $fontsize-xs;
+    }
+  }
   .plan-menu {
     text-align: center;
-    padding: 20px; //20px 0px
-
+    padding: 20px;
     color: $black;
     font-size: $fontsize-s;
     border-top: 1px solid $gray_gainsboro;
@@ -40,11 +64,10 @@
     }
   }
   &:nth-child(2n) {
-    //margin: 34px 0px;
     .plan-name {
       text-align: center;
       margin: 0px;
-      padding: 16px 31px; //17px 20px
+      padding: 16px 31px;
       color: $white;
       font-size: $fontsize-m;
       font-weight: bold;
@@ -56,33 +79,6 @@
       &:last-child {
         padding: 20px 10px 15px;
       }
-    }
-  }
-  .plan-body {
-    border: 1px solid $gray_gainsboro;
-    margin: 0px;
-    padding: 0px;
-    & > .plan-price {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      //height: 142px;
-      padding: 24px 0px;
-      background-color: $gray_desertStorm;
-      & > .each-price {
-        color: $orange_bistre;
-        font-size: $fontsize-xxl;
-        font-weight: bolder;
-        &::before {
-          content: "￥";
-          font-size: $fontsize-s;
-        }
-      }
-    }
-    & > .plan-getsugaku {
-      color: $black;
-      font-size: $fontsize-xs;
     }
   }
 }
