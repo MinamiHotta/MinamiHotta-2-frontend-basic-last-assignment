@@ -14,9 +14,7 @@
       width: 100%;
       @media screen and (max-width: $breakpoint-md) {
         height: 360px;
-        object-fit: none; //
-        //高さに合わせてトリミングされる
-        //clip: rect( 36px, 290px, 194px, 95px );
+        object-fit: none;
       }
     }
     /*molecules で作成した message をもとに、色を追加しましょう。
