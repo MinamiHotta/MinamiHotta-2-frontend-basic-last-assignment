@@ -1,0 +1,32 @@
+@use "../../variables" as *;
+//画像サイズは画面サイズにあわせていっぱい
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $black;
+  & > .about-img {
+    //1×4
+    /*display: flex;
+  //position: relative;
+  justify-content: space-between;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;*/
+    object-fit: cover;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: $breakpoint-lg) {
+      flex-wrap: wrap;
+    }
+  }
+}
+//message部
+/*
+/*文字の切り返しは自動、mdとlgで文字の大きさ・line-height, padding, タイトルのmargin-bottomが違う
+background-color:$white_smoke;
+h2部の　color:$orange_bistre;
+を追加
+*/
