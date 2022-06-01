@@ -1,11 +1,11 @@
 @use "../../variables" as *;
 //for 並べ替え
-/*.plan {
+.plan {
   display: flex;
-  flex-direction: column;
-  @media screen and (min-width: $breakpoint-md) {
-    flex-direction: row;
-  }
+  //flex-direction: column;
+  //@media screen and (min-width: $breakpoint-md) {
+  flex-direction: row;
+  //}
 }
 //for 縦横の余白
 /*margin-bottom: 24px;
@@ -17,10 +17,17 @@
 
 .each-plan {
   //本当は、周りにborderを付けたくないが、どうすれば「コアタイム」のところを引き延ばせるか
-  border: 1px solid $gray_gainsboro;
-  // display: flex;
-  // flex-direction: column;
+  //border: 1px solid $gray_gainsboro;
   // justify-content: space-between;
+  .plan-menu {
+    text-align: center;
+    padding: 20px; //20px 0px
+
+    color: $black;
+    font-size: $fontsize-s;
+    border-top: 1px solid $gray_gainsboro;
+    list-style: none;
+  }
   &:nth-child(2n + 1) {
     .plan-name {
       text-align: center;
@@ -36,6 +43,7 @@
     //margin: 34px 0px;
     .plan-name {
       text-align: center;
+      margin: 0px;
       padding: 16px 31px; //17px 20px
       color: $white;
       font-size: $fontsize-m;
@@ -44,9 +52,14 @@
     }
     border: 5px solid $orange_bistre;
     box-sizing: border-box;
+    .plan-menu {
+      &:last-child {
+        padding: 20px 10px 15px;
+      }
+    }
   }
   .plan-body {
-    //border: 1px solid $gray_gainsboro;
+    border: 1px solid $gray_gainsboro;
     margin: 0px;
     padding: 0px;
     & > .plan-price {
@@ -71,15 +84,6 @@
       color: $black;
       font-size: $fontsize-xs;
     }
-  }
-  .plan-menu {
-    text-align: center;
-    padding: 20px 0px;
-    color: $black;
-    font-size: $fontsize-s;
-    border-top: 1px solid $gray_gainsboro;
-    list-style: none;
-    padding: 20px 19px 15px;
   }
 }
 //}
