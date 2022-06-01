@@ -24,22 +24,18 @@
     & > .top-text {
       position: absolute;
       text-align: center;
-      //top: 50%; //204px; //298px; //縦書きになったときの真ん中
-      //left: 50%; //446px; //352px;
       font-family: $fontfamily-mincho;
       font-size: $fontsize-xl;
       writing-mode: vertical-rl;
       @media screen and (max-width: $breakpoint-md) {
-        // top: 151px;
-        // left: 415.5px;
         font-size: $fontsize-l;
       }
     }
   }
 
   & > .top-message {
+    //background-color: $black;
     color: $white;
-    background-color: $black;
   }
 
   // & > .top-body {
