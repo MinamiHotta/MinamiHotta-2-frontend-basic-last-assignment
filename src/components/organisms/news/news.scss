@@ -1,9 +1,10 @@
 @use "../../variables" as *;
 .news {
   .news-body {
-    padding-left: 0px; //liタグの右余白なくす
     border: 1px solid $gray_desertStorm;
     & > .each-news {
+      display: flex;
+      flex-direction: column;
       padding: 20px;
       margin: 0px;
       background-color: $white;
@@ -21,7 +22,6 @@
         color: $black;
         font-size: $fontsize-m;
         transition: 0.2s ease;
-        //easeで変わる
         &:hover {
           color: $orange_bistre;
           text-decoration: none;
@@ -29,10 +29,13 @@
       }
     }
   }
-  .news-and-events-more {
-    display: block;
-    text-align: right;
+
+  & > .news-footer {
+    display: flex;
+    flex-direction: column;
     margin: 30px 0px 35px;
+    & > .news-and-events-more {
+      margin-top: 0px;
+    }
   }
 }
-//導入してくるパーツの、右寄せ、左寄せを調整と、実装結果確認
