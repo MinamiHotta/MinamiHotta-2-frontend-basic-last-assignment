@@ -12,13 +12,15 @@
       }
     }
   }
+  & > .message {
+    background-color: $white_smoke;
+    & > h2 {
+      color: $orange_bistre;
+    }
+  }
 }
 //message部
 /*確認①　Molecules-Messageと比較→文字の切り返しは自動、mdとlgで文字の大きさ・line-height, padding, タイトルのmargin-bottomが違う
-確認②追記する
-background-color:$white_smoke;
-h2部の　color:$orange_bistre;
-を追加
 */
 
 //1×4
