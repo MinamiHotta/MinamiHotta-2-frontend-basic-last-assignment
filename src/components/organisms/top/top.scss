@@ -1,8 +1,4 @@
 @use "../../variables" as *;
-/* break-point=md
-・そうだ。カフェに行こうの部分は縦書きでお願いします。
-・md以下の時は画像の高さは360px固定、lg以上の時はウィンドウの高さいっぱいになるようにお願いします。
-*/
 .top {
   & > .top-upside {
     display: flex;
@@ -17,8 +13,6 @@
         object-fit: none;
       }
     }
-    /*molecules で作成した message をもとに、色を追加しましょう。
-    このパーツの message だけに新しくスタイルを追加するにはどうすれば良いでしょうか？*/
     & > .top-text {
       position: absolute;
       text-align: center;
@@ -30,68 +24,22 @@
       }
     }
   }
-  //margin, padding はbreakpointのときのみ
-  & > .top-message {
+  & > .top-bottom {
     background-color: $black;
-    padding: 32px 20px 33px;
-    & > h2 {
-      color: $white;
+    padding: 0px 16px 22px;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 0px 135px;
     }
-    & > p {
-      color: $white;
+    & > .message {
+      @media screen and (max-width: $breakpoint-md) {
+        padding: 32px 20px;
+      }
+      & > h2 {
+        color: $white;
+      }
+      & > p {
+        color: $white;
+      }
     }
   }
 }
-
-// & > .top-body {
-// text-align: center;
-// padding-top: 52px;
-// padding-bottom: 74px;
-// background-color: $black;
-// @media screen and (max-width: $breakpoint-md) {
-//   padding-top: 30px;
-//   padding-bottom: 32px;
-// }
-// & > .top-content {
-//   color: $white;
-//   margin: 0px 16px 22px;
-/*
-      .message {
-  text-align: center;
-  padding: 52px 20px;
-  @media screen and (max-width: $breakpoint-md) {
-    padding: 12px 12.5px 10px;
-  }
-  & > h2 {
-    font-size: $fontsize-xl;
-    color: $black;
-    font-family: $fontfamily-mincho;
-    margin-bottom: 10px;
-    @media screen and (max-width: $breakpoint-md) {
-      margin-bottom: 8px;
-      font-size: $fontsize-l;
-    }
-  }
-  & > p {
-    font-size: $fontsize-s;
-    color: $black;
-    font-family: $fontfamily-gothic;
-  }
-}*/
-
-//     & > .top-message {
-//       font-family: $fontfamily-mincho;
-//       font-size: $fontsize-xl;
-//       padding: 0px 13.5px 10px;
-//       @media screen and (max-width: $breakpoint-md) {
-//         padding: 34.5px 92px 0px;
-//         font-size: $fontsize-l;
-//       }
-//     }
-//     & > .top-content2 {
-//       font-size: $fontsize-s;
-//       padding: 0px;
-//       @media screen and (max-width: $breakpoint-md) {
-//         padding: 0px 25px 32px;
-//       }
-//     }}
