@@ -1,12 +1,12 @@
 @use "../../variables" as *;
 //for 並べ替え
-.plan {
+/*.plan {
   display: flex;
-  //flex-direction: column;
-  //@media screen and (min-width: $breakpoint-md) {
-  flex-direction: row;
-  //}
-}
+  flex-direction: column;
+  @media screen and (min-width: $breakpoint-md) {
+  flex-direction: column;
+  }
+}*/
 //for 縦横の余白
 /*margin-bottom: 24px;
     padding: 0px;
@@ -18,15 +18,12 @@
 .each-plan {
   .plan-body {
     border: 1px solid $gray_gainsboro;
-    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     & > .plan-price {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin-top: 0px;
       padding: 24px 0px;
       background-color: $gray_desertStorm;
       & > .each-price {
@@ -56,7 +53,6 @@
     .plan-name {
       text-align: center;
       padding: 18px 31px;
-      margin-bottom: 0px;
       color: $white;
       font-size: $fontsize-m;
       font-weight: bold;
@@ -66,7 +62,7 @@
   &:nth-child(2n) {
     .plan-name {
       text-align: center;
-      margin: 0px;
+      height: 55px; //隙間防止
       padding: 16px 31px;
       color: $white;
       font-size: $fontsize-m;
@@ -83,22 +79,3 @@
   }
 }
 //}
-
-//molecules-messageから持ってくる
-//CSS Dinerのnth childを使うこと！→p要素の場合、p:nth-child(2n+1)と(2n)にしてbackground-color変える
-/*.message{
-    color:$white; //これはデタラメ
-}
-//h1とh2のフォントサイズはmolecules-messageの通り
-.h1{
-    color: $orange_bistre;
-    font-family: $fontfamily-mincho;
-    font-size: $fontsize-l;
-}
-.h2{
-    color: $black;
-    font-size: $fontsize-s;
-}
-
-}
-*/
