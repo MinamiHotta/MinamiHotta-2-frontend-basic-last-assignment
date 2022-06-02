@@ -1,16 +1,37 @@
 @use "../../variables" as *;
+.nav-textcolor {
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+//左寄せ
+.navbar-concept {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  //justify-content: flex-start;
+  & > .navbar-concept-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  & > .navbar-concept-more {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 .dropdown {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $black;
   color: $white;
-  padding: 0px 16px;
+  //padding: 0px 16px;
   border: 1px solid $black;
   & > .humberger-icon {
     background-color: $black;
     &:active {
-      .dropdown-menu {
+      .dropdownmenu {
         color: $white;
         background-color: $black;
         padding: 15px 0px;
@@ -85,4 +106,8 @@ input {
 #menu_bar02:checked ~ #links02 li {
   height: 54px;
   opacity: 1;
+}
+
+.navbar-style {
+  background-color: $black;
 }
