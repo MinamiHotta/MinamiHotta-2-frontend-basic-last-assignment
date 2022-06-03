@@ -3,8 +3,6 @@
   .news-body {
     border: 1px solid $gray_desertStorm;
     & > .each-news {
-      display: flex;
-      flex-direction: column;
       padding: 20px;
       margin: 0px;
       background-color: $white;
