@@ -31,10 +31,10 @@
   }
 
   & > .news-footer {
-    display: flex;
-    flex-direction: column;
     margin: 30px 0px 35px;
     & > .news-and-events-more {
+      display: block;
+      text-align: right;
       margin-top: 0px;
     }
   }
