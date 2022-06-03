@@ -1,6 +1,7 @@
 @use "../../variables" as *;
 .nav-textcolor {
   color: $white;
+  font-size: $fontsize-s;
   &:hover {
     color: $white;
   }
@@ -19,6 +20,11 @@
     display: flex;
     justify-content: flex-start;
   }
+}
+
+#navbarNavDropdownConcept {
+  padding-left: 12px; //ここの値確かめる
+  padding: 15px 0px;
 }
 .dropdown {
   display: flex;
