@@ -1,9 +1,34 @@
 @use "../../variables" as *;
+.navbar-back {
+  background-color: $black;
+}
 .nav-textcolor {
   color: $white;
   font-size: $fontsize-s;
   &:hover {
     color: $white;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    transition: 0.2s ease;
+    &:hover {
+      color: $gray_nobel;
+    }
+  }
+}
+.header-button {
+  padding: 30px 18px 18px;
+  text-align: left;
+  @media screen and (max-width: $breakpoint-lg) {
+    transition: 0.2s ease;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+.concept-dropdown {
+}
+.dropdown-menu-original {
+  @media screen and (min-width: $breakpoint-lg) {
   }
 }
 //左寄せ
@@ -26,7 +51,7 @@
   padding-left: 12px; //ここの値確かめる
   padding: 15px 0px;
 }
-.dropdown {
+.drop-down {
   display: flex;
   align-items: center;
   justify-content: space-between;
