@@ -1,8 +1,10 @@
 @use "../../variables" as *;
 .card {
-  margin-bottom: auto;
-  //   padding: 0px;
-  //   & > .card-title {
-  //     margin-left: 15px;
-  //   }
+  margin-bottom: 40px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 100px;
+  }
+  & > .card-title {
+    padding-left: 15px;
+  }
 }
