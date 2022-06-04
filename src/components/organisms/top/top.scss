@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 .top {
+  background-color: $black;
   & > .top-upside {
     display: flex;
     align-items: center;
@@ -7,15 +8,15 @@
     color: $white;
     & > img {
       width: 100%;
-      background-color: $black;
-      @media screen and (max-width: $breakpoint-md) {
-        height: 360px;
-        object-fit: none;
+      height: 360px;
+      object-fit: none;
+      @media screen and (min-width: $breakpoint-md) {
+        object-fit: fill;
+        height: 100%;
       }
     }
     & > .top-text {
       position: absolute;
-      text-align: center;
       font-family: $fontfamily-mincho;
       font-size: $fontsize-xl;
       writing-mode: vertical-rl;
@@ -25,13 +26,12 @@
     }
   }
   & > .top-bottom {
-    background-color: $black;
-    padding: 0px 16px 22px;
-    @media screen and (max-width: $breakpoint-md) {
-      padding: 0px 135px;
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 0px 16px 22px;
     }
     & > .message {
       @media screen and (max-width: $breakpoint-md) {
+        margin: 0px 135px;
         padding: 32px 20px;
       }
       & > h2 {
