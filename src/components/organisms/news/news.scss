@@ -13,6 +13,7 @@
         border-top: 1px solid $gray_desertStorm;
       }
       & > .news-date {
+        display: block;
         color: $gray_nobel;
         font-size: $fontsize-xs;
       }
