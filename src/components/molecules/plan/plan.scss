@@ -7,14 +7,6 @@
     flex-direction: column;
   }
 }
-//for 縦横の余白
-/*margin-bottom: 24px;
-    padding: 0px;
-    @media screen and (min-width: $breakpoint-md) {
-      margin-bottom: 0px;
-      margin-right: auto;
-    }*/
-
 .each-plan {
   .plan-body {
     border: 1px solid $gray_gainsboro;
@@ -75,4 +67,3 @@
     }
   }
 }
-//}
