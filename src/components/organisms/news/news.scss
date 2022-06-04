@@ -1,6 +1,6 @@
 @use "../../variables" as *;
 .news {
-  .news-body {
+  & > .news-body {
     border: 1px solid $gray_desertStorm;
     & > .each-news {
       padding: 20px;
@@ -30,9 +30,8 @@
 
   & > .news-footer {
     margin: 30px 0px 35px;
+    text-align: right;
     & > .news-and-events-more {
-      display: block;
-      text-align: right;
       margin-top: 0px;
     }
   }
