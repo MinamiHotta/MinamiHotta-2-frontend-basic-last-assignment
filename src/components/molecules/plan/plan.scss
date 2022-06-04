@@ -1,23 +1,15 @@
 @use "../../variables" as *;
-//for 並べ替え
-.plan {
-  display: flex;
-  flex-direction: row;
-  @media screen and (min-width: $breakpoint-md) {
-    flex-direction: column;
-  }
-}
 .each-plan {
   .plan-body {
     border: 1px solid $gray_gainsboro;
     margin: 0px;
     padding: 0px;
     list-style: none;
-    & > .plan-price {
+    .plan-price {
       text-align: center;
       padding: 24px 0px;
       background-color: $gray_desertStorm;
-      & > .each-price {
+      .each-price {
         color: $orange_bistre;
         font-size: $fontsize-xxl;
         font-weight: bolder;
@@ -27,7 +19,7 @@
         }
       }
     }
-    & > .plan-getsugaku {
+    .plan-getsugaku {
       font-size: $fontsize-s;
     }
   }
@@ -42,7 +34,7 @@
     .plan-name {
       text-align: center;
       height: 65px;
-      padding: 20px; //18px 31px;
+      padding: 20px;
       color: $white;
       font-size: $fontsize-m;
       font-weight: bold;
@@ -54,7 +46,7 @@
     .plan-name {
       text-align: center;
       height: 60px; //隙間防止
-      padding: 15px; //16px 31px;
+      padding: 15px;
       color: $white;
       font-size: $fontsize-m;
       font-weight: bold;
