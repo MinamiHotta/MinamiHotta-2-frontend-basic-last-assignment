@@ -1,10 +1,11 @@
 @use "../../variables" as *;
 .card {
-  margin-bottom: 40px;
-  @media screen and (min-width: $breakpoint-md) {
-    margin-bottom: 100px;
+  margin-bottom: 100px; //Figmaの値、不必要かもしれない
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 0px 20px;
+    margin-bottom: 40px;
   }
   & > .card-title {
-    padding-left: 15px;
+    padding-left: 19px; //containerのpadding-left:15px; + card-titleはleft:4px;
   }
 }
