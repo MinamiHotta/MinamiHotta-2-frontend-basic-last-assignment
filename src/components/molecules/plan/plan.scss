@@ -18,9 +18,9 @@
           font-size: $fontsize-l;
         }
       }
-    }
-    .plan-getsugaku {
-      font-size: $fontsize-s;
+      .plan-getsugaku {
+        font-size: $fontsize-s;
+      }
     }
   }
   .plan-menu {
@@ -30,26 +30,20 @@
     border-top: 1px solid $gray_gainsboro;
     list-style: none;
   }
-  &:nth-child(2n + 1) {
-    .plan-name {
-      text-align: center;
-      height: 65px;
-      padding: 20px;
-      color: $white;
-      font-size: $fontsize-m;
-      font-weight: bold;
-      background-color: $orange_zorba;
-    }
+  .plan-name {
+    text-align: center;
+    height: 65px;
+    padding: 20px;
+    color: $white;
+    font-size: $fontsize-m;
+    font-weight: bold;
+    background-color: $orange_zorba;
   }
   &:nth-child(2n) {
     border: 5px solid $orange_bistre;
     .plan-name {
-      text-align: center;
       height: 60px; //隙間防止
       padding: 15px;
-      color: $white;
-      font-size: $fontsize-m;
-      font-weight: bold;
       background-color: $orange_bistre;
     }
     .plan-menu {
