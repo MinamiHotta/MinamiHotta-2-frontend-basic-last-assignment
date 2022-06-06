@@ -14,14 +14,14 @@
     @media screen and (max-width: $breakpoint-md) {
       font-size: $fontsize-l;
       margin-bottom: 6px;
-      line-height: 36px;
+      line-height: 30px;
     }
   }
   & > p {
     font-size: $fontsize-s;
     color: $black;
     font-family: $fontfamily-gothic;
-    line-height: 30px;
+    line-height: 36px;
     @media screen and (max-width: $breakpoint-md) {
       line-height: 28px;
     }
