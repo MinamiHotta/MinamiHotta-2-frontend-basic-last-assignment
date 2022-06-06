@@ -1,0 +1,15 @@
+@use "../../variables" as *;
+.plans {
+  & > .message {
+    padding-top: 0px;
+    & > h2 {
+      color: $orange_bistre;
+    }
+  }
+  .each-plan {
+    margin-bottom: 24px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 40px;
+    }
+  }
+}
