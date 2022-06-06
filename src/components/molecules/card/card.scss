@@ -1,6 +1,11 @@
 @use "../../variables" as *;
 .card {
+  position: relative;
   border: none;
+  margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
   & > .img-wrapper {
     overflow: hidden;
     & > img {
@@ -23,7 +28,7 @@
   & > .card-title {
     position: absolute;
     top: 0px;
-    left: 4px;
+    left: 24px; //.cardのpadding 20px+4px分右
     font-size: $fontsize-l;
     font-weight: bold;
     color: $orange_bistre;
