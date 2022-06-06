@@ -1,0 +1,39 @@
+@use "../../variables" as *;
+.news {
+  & > .news-body {
+    border: 1px solid $gray_desertStorm;
+    & > .each-news {
+      padding: 20px;
+      margin: 0px;
+      background-color: $white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:not(:first-child) {
+        border-top: 1px solid $gray_desertStorm;
+      }
+      & > .news-date {
+        display: block;
+        color: $gray_nobel;
+        font-size: $fontsize-xs;
+      }
+      & > .news-text {
+        color: $black;
+        font-size: $fontsize-m;
+        transition: 0.2s ease;
+        &:hover {
+          color: $orange_bistre;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  & > .news-footer {
+    margin: 30px 0px 35px;
+    text-align: right;
+    & > .news-and-events-more {
+      margin-top: 0px;
+    }
+  }
+}
