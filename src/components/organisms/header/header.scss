@@ -1,9 +1,41 @@
 @use "../../variables" as *;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
 .navbar-back {
   background-color: $black;
+  padding: 33px 30px;
   @media screen and (min-width: $breakpoint-lg) {
     background-color: $gray_nobel;
   }
+}
+.nav-link .header-concept .navbar-back-concept {
+  @media screen and (min-width: $breakpoint-md) {
+    margin-left: 0px;
+    //display: none;
+  }
+}
+.line-concept {
+  display: flex;
+  justify-content: space-between;
+  .header-plus-icon {
+    display: block;
+  }
+}
+//本当はhoverしないときにしまう、hoverしたら出る
+.nav-item .active {
+  @media screen and (min-width: $breakpoint-md) {
+    //display: none;
+  }
+}
+.navbar-concept-more {
+  display: flex;
+  flex-direction: column;
+}
+.navbar-nav .navbar-nav-concept {
+  display: flex;
+  flex-direction: column;
 }
 .nav-textcolor {
   padding: 15px 0px;
@@ -38,6 +70,7 @@
   background-color: $black;
   font-size: $fontsize-s;
   padding: 15px 0px;
+  margin-left: 12px;
   &:hover {
     color: $white;
     background-color: $black;
@@ -50,7 +83,10 @@
     }
   }
 }
-.nav-link {
+.dropdown-menu-back {
+  background-color: $black;
+  margin: 0px;
+  padding: 0px;
 }
 //左寄せ
 .navbar-concept {
@@ -67,10 +103,16 @@
     justify-content: flex-start;
   }
 }
+#navbarNavDropdown {
+  @media screen and (min-width: $breakpoint-md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 #navbarNavDropdownConcept {
-  padding-left: 12px; //ここの値確かめる
-  padding: 15px 0px;
+  padding-left: 12px;
+  padding: 0px;
 }
 .drop-down {
   display: flex;
