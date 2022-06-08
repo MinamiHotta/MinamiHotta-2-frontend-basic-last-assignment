@@ -10,12 +10,12 @@
     background-color: $gray_nobel;
   }
 }
-.nav-link .header-concept .navbar-back-concept {
-  @media screen and (min-width: $breakpoint-md) {
-    margin-left: 0px;
-    //display: none;
-  }
-}
+// .nav-link .header-concept .navbar-back-concept {
+//   @media screen and (min-width: $breakpoint-md) {
+//     margin-left: 0px;
+//     //display: none;
+//   }
+// }
 .line-concept {
   display: flex;
   justify-content: space-between;
