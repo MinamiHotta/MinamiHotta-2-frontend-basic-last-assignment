@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     height: 360px;
-    @media screen and (min-width: $breakpoint-md) {
-      height: 100vw;
+    @media screen and (min-width: $breakpoint-lg) {
+      height: 100vh;
     }
     background-image: url("../../../img/top-image.png");
     background-repeat: no-repeat;
