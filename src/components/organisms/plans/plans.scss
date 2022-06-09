@@ -1,5 +1,5 @@
 @use "../../variables" as *;
-.plans {
+.organisms-plans {
   & > .message {
     padding-top: 0px;
     & > h2 {
@@ -11,5 +11,12 @@
     @media screen and (min-width: $breakpoint-md) {
       margin-bottom: 40px;
     }
+    &:nth-child(2n) {
+      padding: 0px;
+    }
+  }
+  .button-wrapper {
+    display: flex;
+    align-items: center;
   }
 }
