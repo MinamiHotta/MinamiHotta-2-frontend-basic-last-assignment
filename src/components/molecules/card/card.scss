@@ -1,0 +1,51 @@
+@use "../../variables" as *;
+.card {
+  position: relative;
+  border: none;
+  margin-bottom: 100px;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
+  & > .img-wrapper {
+    overflow: hidden;
+    & > img {
+      width: 100%;
+      transition: 0.5s ease;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      &:hover > img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  & > .triangle {
+    top: 0px;
+    width: 0px;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid $white;
+    position: absolute;
+  }
+  & > .card-title {
+    position: absolute;
+    top: 0px;
+    left: 19px; //.cardのpadding 15px+4px分右
+    font-size: $fontsize-l;
+    font-weight: bold;
+    color: $orange_bistre;
+  }
+  & > .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white_smoke;
+    padding: 32px 46px;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 32px 35px;
+    }
+    & > .card-text {
+      margin-bottom: 30px;
+      font-size: $fontsize-s;
+      line-height: 33px;
+    }
+  }
+}
