@@ -2,27 +2,72 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  // ロゴのサイズはwidth, height決める？
+  .navbar-brand {
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 33px;
+    }
+  }
+  .nav-textcolor {
+    padding: 15px 0px;
+    color: $white;
+    font-size: $fontsize-s;
+    &:hover {
+      color: $white;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding: 27px 0px;
+      transition: 0.2s ease;
+      &:hover {
+        color: $gray_nobel;
+      }
+    }
+  }
+  .header-wrapper {
+    display: block;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      margin-left: auto; //効いていない
+    }
+  }
+  // ＋ボタンを右寄せしたい
+  .row-concept {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .header-plus-icon {
+      margin-left: auto;
+      @media screen and (min-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+  //CONCEPTのドロップダウン
+  .concept-dropdown:hover {
+    display: none;
+    @media screen and (min-width: $breakpoint-lg) {
+      display: inline;
+    }
+  }
 }
+//.navbar-backを.navbarの中に入れると色が消える
 .navbar-back {
   background-color: $black;
   padding: 33px 30px;
   @media screen and (min-width: $breakpoint-lg) {
-    background-color: $gray_nobel;
+    background-color: $black_50;
   }
 }
+
 // .nav-link .header-concept .navbar-back-concept {
 //   @media screen and (min-width: $breakpoint-md) {
 //     margin-left: 0px;
 //     //display: none;
 //   }
 // }
-.line-concept {
-  display: flex;
-  justify-content: space-between;
-  .header-plus-icon {
-    display: block;
-  }
-}
+
 //本当はhoverしないときにしまう、hoverしたら出る
 .nav-item .active {
   @media screen and (min-width: $breakpoint-md) {
@@ -37,21 +82,7 @@
   display: flex;
   flex-direction: column;
 }
-.nav-textcolor {
-  padding: 15px 0px;
-  color: $white;
-  font-size: $fontsize-s;
-  &:hover {
-    color: $white;
-  }
-  @media screen and (min-width: $breakpoint-lg) {
-    padding: 27px 0px;
-    transition: 0.2s ease;
-    &:hover {
-      color: $gray_nobel;
-    }
-  }
-}
+
 .navbar-place {
   display: block;
   align-items: right;
@@ -83,8 +114,9 @@
     }
   }
 }
+//無駄な余白分の色
 .dropdown-menu-back {
-  background-color: $black;
+  //background-color: $black;
   margin: 0px;
   padding: 0px;
 }
