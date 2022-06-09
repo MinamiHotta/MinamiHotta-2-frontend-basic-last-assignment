@@ -6,17 +6,26 @@
       color: $orange_bistre;
     }
   }
-  .each-plan {
-    margin-bottom: 24px;
-    @media screen and (min-width: $breakpoint-md) {
-      margin-bottom: 40px;
+  .plans-wrapper {
+    .plan-col {
+      // padding: 0px;
+      // margin-right: 15px;
+      // margin-left: 15px;
     }
-    &:nth-child(2n) {
-      padding: 0px;
+    .each-plan {
+      width: 100%;
+      margin-bottom: 24px;
+      @media screen and (min-width: $breakpoint-md) {
+        margin-bottom: 40px;
+      }
+      // &:nth-child(2n) {
+      //   margin-right: 0px;
+      //   margin-left: 0px;
+      // }
     }
   }
   .button-wrapper {
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 }
