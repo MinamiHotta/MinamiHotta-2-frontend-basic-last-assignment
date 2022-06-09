@@ -1,4 +1,15 @@
+@use "../../variables" as *;
 .news-and-events {
   padding: 56px 0px;
+  .each-news {
+    @media screen and (min-width: $breakpoint-md) {
+      &:last-child {
+        padding-bottom: 7px;
+      }
+    }
+  }
+  .news-and-events-more {
+    margin-top: 0px;
+  }
 }
 //縦幅ずれている
