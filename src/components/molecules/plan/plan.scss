@@ -1,11 +1,8 @@
 @use "../../variables" as *;
-.plan {
-  display: flex;
-}
 .each-plan {
   margin-bottom: 24px;
   @media screen and (min-width: $breakpoint-md) {
-    margin-bottom: 40px; //必要？
+    margin-bottom: 40px;
   }
   .plan-body {
     border: 1px solid $gray_gainsboro;
@@ -33,6 +30,11 @@
   .plan-menu {
     text-align: center;
     padding: 20px;
+    &:last-child {
+      @media screen and (min-width: $breakpoint-md) {
+        padding: 20px 19px;
+      }
+    }
     font-size: $fontsize-s;
     border-top: 1px solid $gray_gainsboro;
     list-style: none;
@@ -40,9 +42,6 @@
   .plan-name {
     text-align: center;
     padding: 20px;
-    @media screen and (min-width: $breakpoint-md) {
-      padding: 20px 19px;
-    }
     color: $white;
     font-size: $fontsize-m;
     font-weight: bold;
@@ -56,7 +55,7 @@
     }
     .plan-menu {
       &:last-child {
-        padding: 20px 10px 15px;
+        padding-bottom: 15px;
         @media screen and (min-width: $breakpoint-md) {
           padding: 20px 12px 15px;
         }
