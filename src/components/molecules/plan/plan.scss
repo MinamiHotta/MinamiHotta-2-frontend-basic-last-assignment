@@ -1,0 +1,65 @@
+@use "../../variables" as *;
+.each-plan {
+  margin-bottom: 24px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
+  .plan-body {
+    border: 1px solid $gray_gainsboro;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    .plan-price {
+      text-align: center;
+      padding: 24px 0px;
+      background-color: $gray_desertStorm;
+      .each-price {
+        color: $orange_bistre;
+        font-size: $fontsize-xxl;
+        font-weight: bolder;
+        &::before {
+          content: "￥";
+          font-size: $fontsize-l;
+        }
+      }
+      .plan-getsugaku {
+        font-size: $fontsize-s;
+      }
+    }
+  }
+  .plan-menu {
+    text-align: center;
+    padding: 20px;
+    &:last-child {
+      @media screen and (min-width: $breakpoint-md) {
+        padding: 20px 19px;
+      }
+    }
+    font-size: $fontsize-s;
+    border-top: 1px solid $gray_gainsboro;
+    list-style: none;
+  }
+  .plan-name {
+    text-align: center;
+    padding: 20px;
+    color: $white;
+    font-size: $fontsize-m;
+    font-weight: bold;
+    background-color: $orange_zorba;
+  }
+  &:nth-child(2n) {
+    border: 5px solid $orange_bistre;
+    .plan-name {
+      padding-top: 15px;
+      background-color: $orange_bistre;
+    }
+    .plan-menu {
+      &:last-child {
+        padding-bottom: 15px;
+        @media screen and (min-width: $breakpoint-md) {
+          padding: 20px 12px 15px;
+        }
+      }
+    }
+  }
+}
