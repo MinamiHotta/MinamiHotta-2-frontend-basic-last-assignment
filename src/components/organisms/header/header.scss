@@ -70,7 +70,7 @@
   background-color: $black;
   font-size: $fontsize-s;
   padding: 15px 0px;
-  margin-left: 12px;
+  margin-left: 12px; //これがhoverの黒出てくる問題、paddingに組み込むべき
   &:hover {
     color: $white;
     background-color: $black;
@@ -116,7 +116,7 @@
 }
 .drop-down {
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
   background-color: $black;
   color: $white;
