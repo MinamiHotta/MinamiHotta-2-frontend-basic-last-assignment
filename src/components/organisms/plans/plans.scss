@@ -7,21 +7,19 @@
     }
   }
   .plans-wrapper {
-    .plan-col {
-      // padding: 0px;
-      // margin-right: 15px;
-      // margin-left: 15px;
-    }
     .each-plan {
-      width: 100%;
       margin-bottom: 24px;
       @media screen and (min-width: $breakpoint-md) {
         margin-bottom: 40px;
       }
-      // &:nth-child(2n) {
-      //   margin-right: 0px;
-      //   margin-left: 0px;
-      // }
+      //これを入れないと枠線がはみ出るが、入れると3枚入らなくなる
+      .plan-col {
+        padding: 0px;
+        &:nth-child(2n + 1) {
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+      }
     }
   }
   .button-wrapper {
