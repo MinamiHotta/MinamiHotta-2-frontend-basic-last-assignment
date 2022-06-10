@@ -1,0 +1,42 @@
+@use "../../variables" as *;
+.top {
+  .top-upside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    @media screen and (min-width: $breakpoint-lg) {
+      height: 100vh;
+    }
+    background-image: url("../../../img/top-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .top-text {
+      writing-mode: vertical-rl;
+      color: $white;
+      font-family: $fontfamily-mincho;
+      font-size: $fontsize-xl;
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: $fontsize-l;
+      }
+    }
+  }
+  .top-message {
+    background-color: $black;
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 0px 16px 22px;
+    }
+    & > .message {
+      @media screen and (max-width: $breakpoint-md) {
+        margin: 0px 135px;
+      }
+      & > h2 {
+        color: $white;
+      }
+      & > p {
+        color: $white;
+      }
+    }
+  }
+}
