@@ -6,7 +6,9 @@
       color: $orange_bistre;
     }
   }
-  .plans-wrapper {
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
     .each-plan {
       margin-bottom: 24px;
       @media screen and (min-width: $breakpoint-md) {
