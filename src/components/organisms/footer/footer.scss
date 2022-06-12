@@ -34,7 +34,7 @@
   font-size: $fontsize-s;
   margin-bottom: 20px;
 }
-//sの時は左寄せ, breakpointの書き方を統一すべき
+//breakpointの書き方を統一すべき, ul同士の間にgap:8pxが欲しい
 .molecules-footer {
   display: flex;
   justify-content: center;
