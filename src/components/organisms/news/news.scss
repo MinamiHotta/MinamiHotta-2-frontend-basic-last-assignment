@@ -4,6 +4,13 @@
     border: 1px solid $gray_desertStorm;
     & > .each-news {
       padding: 20px;
+      @media screen and (min-width: $breakpoint-md) {
+        padding: 19px;
+        &:last-child {
+          padding-top: 18px;
+          padding-bottom: 17px;
+        }
+      }
       margin: 0px;
       background-color: $white;
       white-space: nowrap;
