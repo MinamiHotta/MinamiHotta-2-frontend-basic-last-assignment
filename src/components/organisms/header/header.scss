@@ -1,9 +1,11 @@
 @use "../../variables" as *;
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   // ロゴのサイズはwidth, height決める？
+  .header-top {
+    flex: 1;
+  }
   .navbar-brand {
     @media screen and (min-width: $breakpoint-md) {
       padding: 33px;
@@ -45,10 +47,11 @@
     }
   }
   //CONCEPTのドロップダウン
-  .concept-dropdown:hover {
-    display: none;
+  .concept:hover > ul {
     @media screen and (min-width: $breakpoint-lg) {
       display: inline;
+      position: absolute;
+      //top,leftで位置の微調整
     }
   }
 }
