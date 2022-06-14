@@ -5,10 +5,13 @@
   @media screen and (min-width: $breakpoint-md) {
     padding: 52px;
   }
-  //logoでかすぎ
   .logo-wrapper {
+    display: block;
     text-align: center;
     margin-bottom: 20px;
+    & > img {
+      width: 150px;
+    }
   }
   .footer-more {
     align-self: flex-end;
@@ -29,7 +32,6 @@
     transform: rotate(45deg);
   }
 }
-
 .text-wrap {
   font-size: $fontsize-s;
   margin-bottom: 20px;
@@ -68,14 +70,16 @@
       color: $black;
       transition: color 0.2s ease;
       @media screen and (min-width: $breakpoint-md) {
+        &.disabled-line {
+          &::after {
+            content: "";
+          }
+        }
         &::after {
-          //最後の子要素には｜付けたくない
-          //&:not(:last-child) {
           content: "|";
           padding-right: 8px;
           padding-left: 8px;
           font-size: $fontsize-s;
-          //}
         }
         &:hover {
           color: $orange_bistre;

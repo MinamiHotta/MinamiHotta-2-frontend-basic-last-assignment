@@ -1,14 +1,14 @@
 <div class="footer">
   <div class="contact">
-    <div class="logo-wrapper">
+    <a href="#" class="logo-wrapper">
         <img src="../../../img/footer.png"> </img>
-    </div>
+    </a>
     <div class="text-wrap">
       〒532-0011　大阪市淀川区西中島6丁目8-23テスト<br />TEL.06-1234-5678
       FAX.06-1234-5678　営業時間 / 9:00 - 22:00　定休日 / 不定休
     </div>
     <div class="icon-list">
-      <!-- instagramが表示されない-->
+      <!-- todo:幅離す-->
       <a href="#" class="footer-more">
         <i class="fab fa-twitter"></i>
       </a>
@@ -16,27 +16,28 @@
         <i class="fab fa-facebook"></i>
       </a>
       <a href="#" class="footer-more">
-        <i class="fa fa-instargram" area-hidden="true"></i>
+        <i class="fab fa-instagram"></i>
       </a>
       <a href="#" class="footer-more">
-        <i class="fas fa-wifi fa-rotate-45"></i>
+        <i class="fas fa-rss"></i>
       </a>
     </div>
 </div>
-    <div class="molecules-footer">
+<!-- 2列以上はcss Grid Layout, ulは一つ,ulにGrid設定,liを1fr,1frで50%50%に広がる -->
+    <nav class="molecules-footer">
         <ul class="footer-column">
             <li><a href="#" class="footer-each-content">HOME</a></li>
             <li><a href="#" class="footer-each-content">CONCEPT</a></li>
             <li><a href="#" class="footer-each-content">SERVICE</a></li>
-            <li><a href="#" class="footer-each-content footer-each-content-last">FLOOR</a></li>
+            <li><a href="#" class="footer-each-content">FLOOR</a></li>
         </ul>
         <ul class="footer-column">
             <li><a href="#" class="footer-each-content">INTERVIEW</a></li>
             <li><a href="#" class="footer-each-content">BLOG</a></li>
             <li><a href="#" class="footer-each-content">ACCESS</a></li>
-            <li><a href="#" class="footer-each-content footer-each-content-last">DOWNLOAD</a></li>
+            <li><a href="#" class="footer-each-content disabled-line">DOWNLOAD</a></li>
         </ul>
-    </div>
+    </nav>
     <div class="copyright-wrapper">
       Copyright © WordPressテーマ「Switch(tcd063)」 All Rights Reserved.
     </div>
