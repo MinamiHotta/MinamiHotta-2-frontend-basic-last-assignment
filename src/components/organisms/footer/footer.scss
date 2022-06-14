@@ -7,7 +7,6 @@
   }
   .logo-wrapper {
     display: block;
-    text-align: center;
     margin-bottom: 20px;
     & > img {
       width: 150px;
@@ -24,8 +23,6 @@
     text-decoration: none;
     font-size: $fontsize-s;
     transition: color 0.2s ease;
-    display: inline-flex;
-    align-items: center;
     @media screen and (min-width: $breakpoint-md) {
       &:hover {
         color: $gray_nobel;
@@ -48,7 +45,6 @@
   .footer-column {
     display: flex;
     justify-content: center;
-    width: 100%;
     padding: 0px;
     margin-bottom: 0px;
     @media screen and (max-width: $breakpoint-md) {
@@ -58,15 +54,9 @@
     }
     & > li {
       list-style: none;
-      @media screen and (max-width: $breakpoint-md) {
-        width: 50%;
-      }
     }
     .footer-each-content {
       display: block;
-      @media screen and (max-width: $breakpoint-md) {
-        justify-content: flex-start;
-      }
       text-decoration: none;
       color: $black;
       transition: color 0.2s ease;
