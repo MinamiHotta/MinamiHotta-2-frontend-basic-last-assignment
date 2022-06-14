@@ -1,8 +1,13 @@
 @use "../../variables" as *;
 .navbar {
   display: flex;
-  align-items: center;
-  // ロゴのサイズはwidth, height決める？
+  @media screen and (max-width: $breakpoint-md) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navbar-brand img {
+    width: 120px;
+  }
   .header-top {
     flex: 1;
   }
@@ -58,7 +63,7 @@
 //.navbar-backを.navbarの中に入れると色が消える
 .navbar-back {
   background-color: $black;
-  padding: 33px 30px;
+  padding: 0px;
   @media screen and (min-width: $breakpoint-lg) {
     background-color: $black_50;
   }
