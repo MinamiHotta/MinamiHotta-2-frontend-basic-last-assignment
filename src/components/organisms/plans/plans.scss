@@ -16,11 +16,6 @@
     .each-plan {
       display: flex;
       flex-direction: column;
-      .plan-body {
-        @media screen and (min-width: $breakpoint-lg) {
-          flex: 1;
-        }
-      }
     }
   }
   .button-wrapper {
