@@ -1,42 +1,56 @@
 @use "../../variables" as *;
 .navbar {
   display: flex;
-  @media screen and (max-width: $breakpoint-md) {
-    flex-direction: column;
-    justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  @media screen and (min-width: $breakpoint-xl) {
+    flex-direction: row;
+    align-items: center;
   }
-  .navbar-brand img {
-    width: 120px;
-  }
+
   .header-top {
     flex: 1;
-  }
-  .navbar-brand {
-    @media screen and (min-width: $breakpoint-md) {
-      padding: 33px;
-    }
-  }
-  .nav-textcolor {
-    padding: 15px 0px;
-    color: $white;
-    font-size: $fontsize-s;
-    &:hover {
-      color: $white;
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-      padding: 27px 0px;
-      transition: 0.2s ease;
-      &:hover {
-        color: $gray_nobel;
+    display: flex;
+    align-items: center;
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding-left: 16px;
+      @media screen and (min-width: $breakpoint-xl) {
+        padding-left: 30px;
+      }
+      & img {
+        width: 120px;
+        @media screen and (min-width: $breakpoint-xl) {
+          width: 140px;
+        }
       }
     }
   }
+
   .header-wrapper {
     display: block;
     width: 100%;
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: $breakpoint-xl) {
       display: flex;
-      margin-left: auto; //効いていない
+      padding-right: 30px;
+    }
+    .nav-textstyle {
+      display: block;
+      padding: 15px 0px 15px 16px;
+      color: $white;
+      font-size: $fontsize-s;
+      &:hover {
+        color: $white;
+      }
+      @media screen and (min-width: $breakpoint-xl) {
+        padding: 35px 20px;
+        transition: 0.2s ease;
+        &:hover {
+          color: $gray_nobel;
+        }
+      }
     }
   }
   // ＋ボタンを右寄せしたい
@@ -46,17 +60,42 @@
     width: 100%;
     .header-plus-icon {
       margin-left: auto;
-      @media screen and (min-width: $breakpoint-lg) {
+      @media screen and (min-width: $breakpoint-xl) {
         display: none;
       }
     }
   }
   //CONCEPTのドロップダウン
-  .concept:hover > ul {
-    @media screen and (min-width: $breakpoint-lg) {
-      display: inline;
-      position: absolute;
-      //top,leftで位置の微調整
+  .concept {
+    &:hover > ul {
+      @media screen and (min-width: $breakpoint-xl) {
+        display: inline;
+        position: absolute;
+        left: 275px;
+      }
+      @media screen and (min-width: $breakpoint-xl) {
+        display: inline;
+        position: absolute;
+        left: 510px;
+      }
+    }
+    // #todo collapse.showでpadding-left:40pxが効いているようなのでそれをとるにはどこにクラスを付与すればいいか(collapseと並列させても✕だった)
+    .collapse {
+      list-style-type: none;
+      .dropdown-style {
+        display: block;
+        text-decoration: none;
+        color: $white;
+        padding: 15px 0px 15px 15px;
+        @media screen and (min-width: $breakpoint-xl) {
+          width: 220px;
+          background-color: $black;
+          padding: 18px 0px 18px 18px;
+          &:hover {
+            background-color: $orange_bistre;
+          }
+        }
+      }
     }
   }
 }
@@ -64,121 +103,12 @@
 .navbar-back {
   background-color: $black;
   padding: 0px;
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (min-width: $breakpoint-xl) {
     background-color: $black_50;
   }
 }
-
-// .nav-link .header-concept .navbar-back-concept {
-//   @media screen and (min-width: $breakpoint-md) {
-//     margin-left: 0px;
-//     //display: none;
-//   }
-// }
-
-//本当はhoverしないときにしまう、hoverしたら出る
-.nav-item .active {
-  @media screen and (min-width: $breakpoint-md) {
-    //display: none;
-  }
-}
-.navbar-concept-more {
-  display: flex;
-  flex-direction: column;
-}
-.navbar-nav .navbar-nav-concept {
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar-place {
-  display: block;
-  align-items: right;
-}
-.concept-icon {
-  display: block;
-  right: 16px;
-  background-image: url(../../../img/header-plus-icon.svg);
-  //background-size: contain;
-  background-repeat: no-repeat;
-}
-.header-concept {
-  width: 220px; //これ必要？
-  text-align: left;
-  color: $white;
-  background-color: $black;
-  font-size: $fontsize-s;
-  padding: 15px 0px;
-  margin-left: 12px; //これがhoverの黒出てくる問題、paddingに組み込むべき
-  &:hover {
-    color: $white;
-    background-color: $black;
-  }
-  @media screen and (min-width: $breakpoint-lg) {
-    padding: 18px;
-    transition: 0.2s ease;
-    &:hover {
-      background-color: $orange_bistre;
-    }
-  }
-}
-//無駄な余白分の色
-.dropdown-menu-back {
-  //background-color: $black;
-  margin: 0px;
-  padding: 0px;
-}
-//左寄せ
-.navbar-concept {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0px;
-  //justify-content: flex-start;
-  & > .navbar-concept-top {
-    display: flex;
-    justify-content: space-between;
-  }
-  & > .navbar-concept-more {
-    display: flex;
-    justify-content: flex-start;
-  }
-}
 #navbarNavDropdown {
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: $breakpoint-xl) {
     display: flex;
-    justify-content: space-between;
-  }
-}
-
-#navbarNavDropdownConcept {
-  padding-left: 12px;
-  padding: 0px;
-}
-.drop-down {
-  display: flex;
-  //align-items: center;
-  justify-content: space-between;
-  background-color: $black;
-  color: $white;
-  //padding: 0px 16px;
-  border: 1px solid $black;
-  & > .humberger-icon {
-    background-color: $black;
-    &:active {
-      .dropdownmenu {
-        color: $white;
-        background-color: $black;
-        padding: 15px 0px;
-        text-align: left;
-
-        //display: block;
-        & > .dropdown-text {
-          color: $white;
-        }
-      }
-      & > .concept-ver {
-        padding: 0px 12px;
-      }
-    }
   }
 }
