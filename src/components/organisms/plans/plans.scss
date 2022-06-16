@@ -6,20 +6,18 @@
       color: $orange_bistre;
     }
   }
-
   .plans-container {
     @media screen and (min-width: $breakpoint-md) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
-    .each-plan {
-      display: flex;
-      flex-direction: column;
-    }
   }
   .button-wrapper {
     display: flex;
     justify-content: center;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 100px;
+    }
   }
 }
