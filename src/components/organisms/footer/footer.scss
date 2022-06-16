@@ -1,89 +1,83 @@
 @use "../../variables" as *;
-.contact {
-  text-align: center;
-  padding: 32px;
-  @media screen and (min-width: $breakpoint-md) {
-    padding: 52px;
-  }
-  .logo-wrapper {
-    display: block;
-    margin-bottom: 20px;
-    & > img {
-      width: 150px;
-    }
-  }
-  .footer-more {
-    padding-left: 7px;
-    padding-right: 7px;
-  }
-  .footer-more {
-    align-self: flex-end;
-    cursor: pointer;
-    color: $black;
-    text-decoration: none;
-    font-size: $fontsize-s;
-    transition: color 0.2s ease;
+.footer {
+  .contact {
+    text-align: center;
+    padding: 32px;
     @media screen and (min-width: $breakpoint-md) {
-      &:hover {
-        color: $gray_nobel;
+      padding: 52px;
+    }
+    .logo-wrapper {
+      display: block;
+      margin-bottom: 20px;
+      & > img {
+        width: 150px;
       }
     }
-  }
-}
-.text-wrap {
-  font-size: $fontsize-s;
-  margin-bottom: 20px;
-}
-.molecules-footer {
-  padding: 16px;
-  @media screen and (max-width: $breakpoint-md) {
-    gap: 8px;
-  }
-  background-color: $white_smoke;
-  font-size: $fontsize-s;
-  border-top: 1px solid $gray_nobel;
-  .footer-column {
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-    margin-bottom: 0px;
-    @media screen and (max-width: $breakpoint-md) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
+    .text-wrap {
+      font-size: $fontsize-s;
+      margin-bottom: 20px;
     }
-    & > li {
-      list-style: none;
-    }
-    .footer-each-content {
-      display: block;
-      text-decoration: none;
+    .icon-wrap {
+      padding: 0px 7px;
+      cursor: pointer;
       color: $black;
+      text-decoration: none;
+      font-size: $fontsize-s;
       transition: color 0.2s ease;
       @media screen and (min-width: $breakpoint-md) {
         &:hover {
-          color: $orange_bistre;
-        }
-        &.disabled-line {
-          &::after {
-            content: "";
-          }
-        }
-        &::after {
-          content: "|";
-          padding-right: 8px;
-          padding-left: 8px;
-          font-size: $fontsize-s;
+          color: $gray_nobel;
         }
       }
     }
   }
-}
-.copyright-wrapper {
-  text-align: center;
-  background-color: $black;
-  color: $white;
-  font-size: $fontsize-xs;
-  line-height: 12px;
-  padding: 16px;
+  .footer-nav {
+    padding: 16px;
+    background-color: $white_smoke;
+    font-size: $fontsize-s;
+    border-top: 1px solid $gray_nobel;
+    .footer-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 0px;
+      margin-bottom: 0px;
+      @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+        justify-content: center;
+      }
+      & > li {
+        list-style: none;
+        .footer-each-content {
+          display: block;
+          text-decoration: none;
+          color: $black;
+          transition: color 0.2s ease;
+          @media screen and (min-width: $breakpoint-md) {
+            &:hover {
+              color: $orange_bistre;
+            }
+            &::after {
+              content: "|";
+              padding-right: 8px;
+              padding-left: 8px;
+              font-size: $fontsize-s;
+            }
+            &.disabled-line::after {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    display: block;
+    text-align: center;
+    background-color: $black;
+    color: $white;
+    font-size: $fontsize-xs;
+    line-height: 12px;
+    padding: 16px;
+  }
 }
