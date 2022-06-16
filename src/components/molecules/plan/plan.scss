@@ -48,16 +48,17 @@
     background-color: $orange_zorba;
   }
   &:nth-child(2n) {
-    border: 5px solid $orange_bistre;
     .plan-name {
-      padding-top: 15px;
       background-color: $orange_bistre;
+    }
+    .plan-body {
+      border: 5px solid $orange_bistre;
+      border-top: 1px solid $gray_gainsboro;
     }
     .plan-menu {
       &:last-child {
-        padding-bottom: 15px;
         @media screen and (min-width: $breakpoint-md) {
-          padding: 20px 12px 15px;
+          padding: 20px 12px 16px;
         }
       }
     }
