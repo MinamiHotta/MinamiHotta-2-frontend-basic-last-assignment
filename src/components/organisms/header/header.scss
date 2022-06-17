@@ -7,11 +7,14 @@
     flex-direction: row;
     align-items: center;
   }
-
+  .navbar-toggler {
+    padding-right: 16px;
+  }
   .header-top {
     flex: 1;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     .navbar-brand {
       display: flex;
       align-items: center;
@@ -28,71 +31,82 @@
       }
     }
   }
-
-  .header-wrapper {
-    display: block;
+  #navbarNavDropdown {
     width: 100%;
     @media screen and (min-width: $breakpoint-xl) {
+      width: auto;
       display: flex;
-      padding-right: 30px;
     }
-    .nav-textstyle {
-      display: block;
-      padding: 15px 0px 15px 16px;
-      color: $white;
-      font-size: $fontsize-s;
-      &:hover {
-        color: $white;
-      }
+
+    .header-wrapper {
+      width: 100%;
       @media screen and (min-width: $breakpoint-xl) {
-        padding: 35px 20px;
-        transition: 0.2s ease;
+        display: flex;
+        padding-right: 30px;
+      }
+      .nav-item {
+        display: block;
+      }
+      .nav-textstyle {
+        display: block;
+        padding: 15px 0px 15px 16px;
+        color: $white;
+        font-size: $fontsize-s;
         &:hover {
-          color: $gray_nobel;
+          color: $white;
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+          padding: 35px 20px;
+          transition: 0.2s ease;
+          &:hover {
+            color: $gray_nobel;
+          }
         }
       }
     }
-  }
-  // ＋ボタンを右寄せしたい
-  .row-concept {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    .header-plus-icon {
-      margin-left: auto;
-      @media screen and (min-width: $breakpoint-xl) {
-        display: none;
-      }
-    }
-  }
-  //CONCEPTのドロップダウン
-  .concept {
-    &:hover > ul {
-      @media screen and (min-width: $breakpoint-xl) {
-        display: inline;
-        position: absolute;
-        left: 275px;
-      }
-      @media screen and (min-width: $breakpoint-xl) {
-        display: inline;
-        position: absolute;
-        left: 510px;
-      }
-    }
-    // #todo collapse.showでpadding-left:40pxが効いているようなのでそれをとるにはどこにクラスを付与すればいいか(collapseと並列させても✕だった)
-    .collapse {
-      list-style-type: none;
-      .dropdown-style {
-        display: block;
-        text-decoration: none;
-        color: $white;
-        padding: 15px 0px 15px 15px;
+    .concept-top {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .header-plus-icon {
+        margin-left: auto;
         @media screen and (min-width: $breakpoint-xl) {
-          width: 220px;
-          background-color: $black;
-          padding: 18px 0px 18px 18px;
-          &:hover {
-            background-color: $orange_bistre;
+          display: none;
+        }
+      }
+    }
+
+    .concept {
+      &:hover > ul {
+        @media screen and (min-width: $breakpoint-xl) {
+          display: inline;
+          position: absolute;
+          left: 765px;
+        }
+      }
+
+      .collapse {
+        list-style-type: none;
+        #navbarDropdownMenuLink {
+          .collapsing {
+            color: $white;
+          }
+          .collapse .show {
+            padding-left: 0px;
+          }
+        }
+        .dropdown-style {
+          display: block;
+          text-decoration: none;
+          color: $white;
+          padding: 15px 0px 15px 15px;
+          @media screen and (min-width: $breakpoint-xl) {
+            width: 220px;
+            background-color: $black;
+            padding: 18px 0px 18px 18px;
+            &:hover {
+              background-color: $orange_bistre;
+            }
           }
         }
       }
@@ -105,10 +119,5 @@
   padding: 0px;
   @media screen and (min-width: $breakpoint-xl) {
     background-color: $black_50;
-  }
-}
-#navbarNavDropdown {
-  @media screen and (min-width: $breakpoint-xl) {
-    display: flex;
   }
 }
