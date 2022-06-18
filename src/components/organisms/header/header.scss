@@ -78,29 +78,23 @@
 
     .concept {
       position: relative;
-      &:hover > ul {
-        @media screen and (min-width: $breakpoint-xl) {
-          display: inline;
+      @media screen and (min-width: $breakpoint-xl) {
+        ul {
+          display: none;
           position: absolute;
-          left: -40px;
+          left: -5px;
+        }
+        &:hover > ul {
+          display: block;
         }
       }
-
-      .collapse {
+      .concept-dropdown {
         list-style-type: none;
-        #navbarDropdownMenuLink {
-          .collapsing {
-            color: $white;
-          }
-          .collapse .show {
-            padding-left: 0px;
-          }
-        }
         .dropdown-style {
           display: block;
           text-decoration: none;
           color: $white;
-          padding: 15px 0px 15px 15px;
+          padding: 15px 0px 15px 28px;
           @media screen and (min-width: $breakpoint-xl) {
             width: 220px;
             background-color: $black;
