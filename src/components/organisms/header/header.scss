@@ -80,12 +80,18 @@
       position: relative;
       @media screen and (min-width: $breakpoint-xl) {
         ul {
-          display: none;
+          visibility: hidden;
+          transform: translateY(-10px);
+          opacity: 0;
+          transition: 0.2s ease;
           position: absolute;
           left: -5px;
         }
         &:hover > ul {
           display: block;
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
         }
       }
       .concept-dropdown {
