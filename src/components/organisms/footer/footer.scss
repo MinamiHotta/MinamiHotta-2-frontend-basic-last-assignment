@@ -45,6 +45,7 @@
       @media screen and (min-width: $breakpoint-md) {
         display: flex;
         justify-content: center;
+        gap: 0px;
       }
       & > li {
         list-style: none;
