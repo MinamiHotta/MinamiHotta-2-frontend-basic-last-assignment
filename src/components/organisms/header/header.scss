@@ -1,4 +1,11 @@
 @use "../../variables" as *;
+.navbar-back {
+  background-color: $black;
+  padding: 0px;
+  @media screen and (min-width: $breakpoint-xl) {
+    background-color: $black_50;
+  }
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -7,6 +14,7 @@
     flex-direction: row;
     align-items: center;
   }
+  //header-topとconcept-topの直下にあるのでネストにはせず
   .navbar-toggler {
     padding-right: 16px;
   }
@@ -44,9 +52,6 @@
         display: flex;
         padding-right: 30px;
       }
-      .nav-item {
-        display: block;
-      }
       .nav-textstyle {
         display: block;
         padding: 15px 0px 15px 16px;
@@ -70,9 +75,6 @@
       width: 100%;
       .header-plus-icon {
         margin-left: auto;
-        @media screen and (min-width: $breakpoint-xl) {
-          display: none;
-        }
       }
     }
 
@@ -113,13 +115,5 @@
         }
       }
     }
-  }
-}
-//.navbar-backを.navbarの中に入れると色が消える
-.navbar-back {
-  background-color: $black;
-  padding: 0px;
-  @media screen and (min-width: $breakpoint-xl) {
-    background-color: $black_50;
   }
 }
