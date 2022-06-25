@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 .about {
+  margin: 100px 0px;
   & > .about-img {
     display: flex;
     flex-wrap: wrap;
