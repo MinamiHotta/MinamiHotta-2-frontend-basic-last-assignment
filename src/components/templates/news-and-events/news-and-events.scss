@@ -3,10 +3,15 @@
   padding: 56px 35px;
   margin: 0px 0px 100px;
   background-color: $white_smoke;
+  @media screen and (min-width: $breakpoint-lg) {
+    display: flex;
+    //これが効いていない
+    justify-content: space-between;
+  }
   section {
     margin-bottom: 0px;
   }
-  col {
+  .col {
     padding: 0px;
   }
   .news-and-events-more {
