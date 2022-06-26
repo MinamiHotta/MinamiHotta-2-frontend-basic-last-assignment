@@ -1,5 +1,7 @@
 @use "../../variables" as *;
 .top {
+  position: relative;
+  margin-bottom: 30px;
   .top-upside {
     display: flex;
     align-items: center;
