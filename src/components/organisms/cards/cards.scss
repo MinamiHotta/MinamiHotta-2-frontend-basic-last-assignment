@@ -1,5 +1,8 @@
+@use "../../variables" as *;
 .cards-container {
   .col {
-    margin-bottom: 0px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0px;
+    }
   }
 }
