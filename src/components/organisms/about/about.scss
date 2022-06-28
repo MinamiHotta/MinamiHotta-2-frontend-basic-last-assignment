@@ -1,26 +1,28 @@
 @use "../../variables" as *;
-.container {
-  margin: 0px auto 40px;
-}
-.about {
-  margin-top: 100px; //topでtop:60pxを設定し下に下げたから
-  @media screen and (min-width: $breakpoint-md) {
-    margin-top: 40px;
+.about-wrapper {
+  & > .container {
+    margin: 0px auto 40px;
   }
-  & > .about-img {
-    display: flex;
-    flex-wrap: wrap;
-    & > .about-img-each {
-      width: 50%;
-      @media screen and (min-width: $breakpoint-md) {
-        width: 25%;
+  .about {
+    margin-top: 100px; //topでtop:60pxを設定し下に下げたから
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 40px;
+    }
+    & > .about-img {
+      display: flex;
+      flex-wrap: wrap;
+      & > .about-img-each {
+        width: 50%;
+        @media screen and (min-width: $breakpoint-md) {
+          width: 25%;
+        }
       }
     }
-  }
-  & > .message {
-    background-color: $white_smoke;
-    & > h2 {
-      color: $orange_bistre;
+    & > .message {
+      background-color: $white_smoke;
+      & > h2 {
+        color: $orange_bistre;
+      }
     }
   }
 }

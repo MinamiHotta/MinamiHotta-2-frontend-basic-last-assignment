@@ -1,15 +1,10 @@
 @use "../../variables" as *;
 .news-and-events {
-  padding: 56px 0px;
-  margin: 0px 0px 100px;
+  padding: 56px 0px 94px;
   background-color: $white_smoke;
-  @media screen and (min-width: $breakpoint-lg) {
-    display: flex;
-    //これが効いていない
-    justify-content: space-between;
-  }
-  .container {
-    margin-bottom: 0px;
+  .row {
+    margin-right: auto;
+    margin-left: auto;
   }
   section {
     margin-bottom: 0px;
