@@ -1,9 +1,9 @@
 @use "../../variables" as *;
 .top {
-  position: relative;
   margin-bottom: 30px;
   top: 60px;
   @media screen and (min-width: $breakpoint-xl) {
+    position: relative;
     top: 0px;
   }
   .top-upside {

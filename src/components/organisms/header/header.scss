@@ -8,12 +8,12 @@
 }
 .navbar {
   display: flex;
-  position: absolute;
-  z-index: 1;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
   @media screen and (min-width: $breakpoint-xl) {
+    position: absolute;
+    z-index: 1;
     flex-direction: row;
     align-items: center;
   }

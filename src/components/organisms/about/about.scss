@@ -4,10 +4,7 @@
     margin: 0px auto 40px;
   }
   .about {
-    margin-top: 100px; //topでtop:60pxを設定し下に下げたから
-    @media screen and (min-width: $breakpoint-md) {
-      margin-top: 40px;
-    }
+    margin-top: 40px;
     & > .about-img {
       display: flex;
       flex-wrap: wrap;
