@@ -1,8 +1,5 @@
 @use "../../variables" as *;
 .top {
-  /*position: relative;
-  margin-bottom: 30px;
-  top: 60px;*/
   margin-top: 60px;
   @media screen and (min-width: $breakpoint-xl) {
     margin-top: 0px;
@@ -35,9 +32,6 @@
       padding: 0px 16px 22px;
     }
     & > .message {
-      @media screen and (max-width: $breakpoint-md) {
-        margin: 0px 135px;
-      }
       & > h2 {
         color: $white;
       }
