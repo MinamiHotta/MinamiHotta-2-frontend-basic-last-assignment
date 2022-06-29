@@ -18,6 +18,9 @@
     flex-direction: row;
     align-items: center;
   }
+  button {
+    outline: none;
+  }
   //header-topとconcept-topの直下にあるのでネストにはせず
   .navbar-toggler {
     padding: 4px 16px;
