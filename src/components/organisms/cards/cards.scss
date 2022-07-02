@@ -1,0 +1,9 @@
+@use "../../variables" as *;
+.cards-container {
+  margin-bottom: 100px;
+  .col {
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0px;
+    }
+  }
+}

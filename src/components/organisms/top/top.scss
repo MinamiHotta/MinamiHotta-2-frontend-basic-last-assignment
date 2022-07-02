@@ -1,5 +1,9 @@
 @use "../../variables" as *;
 .top {
+  margin-top: 60px;
+  @media screen and (min-width: $breakpoint-xl) {
+    margin-top: 0px;
+  }
   .top-upside {
     display: flex;
     align-items: center;
@@ -28,9 +32,6 @@
       padding: 0px 16px 22px;
     }
     & > .message {
-      @media screen and (max-width: $breakpoint-md) {
-        margin: 0px 135px;
-      }
       & > h2 {
         color: $white;
       }

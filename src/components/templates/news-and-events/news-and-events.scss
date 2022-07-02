@@ -1,6 +1,10 @@
 @use "../../variables" as *;
 .news-and-events {
-  padding: 56px 0px;
+  padding: 56px 0px 94px;
+  background-color: $white_smoke;
+  section {
+    margin-bottom: 0px;
+  }
   .news-and-events-more {
     margin-top: 0px;
   }
